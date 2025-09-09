@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="일본어 동사 그룹 분류, 활용형, 조사 사용법을 학습할 수 있는 종합 퀴즈 플랫폼">
+    <meta name="keywords" content="일본어, 동사, 활용, 그룹, 조사, を, に, ます형, 학습, 퀴즈">
+    <meta name="author" content="Japanese Verb Master">
+    <title>🎌 일본어 동사 종합 마스터 - 그룹 분류·활용·조사 완전정복</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="nav-home">
+                <button onclick="goHome()" class="home-btn" aria-label="홈으로 돌아가기">🏠 홈</button>
+            </div>
+            <h1>🎌 일본어 동사 종합 마스터</h1>
+            <p>그룹 분류 · 활용형 · 조사 사용법 완전 정복</p>
+        </div>
+
+        <div class="tab-container">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('group')" aria-label="동사 그룹 분류 학습" tabindex="0">📚 그룹 분류</button>
+                <button class="tab-btn" onclick="switchTab('conjugation')" aria-label="동사 활용 학습" tabindex="0">✏️ 동사 활용</button>
+                <button class="tab-btn" onclick="switchTab('particle')" aria-label="조사 을과 에 사용법 학습" tabindex="0">🔤 조사 (を/에)</button>
+                <button class="tab-btn" onclick="switchTab('quiz')" aria-label="종합 퀴즈" tabindex="0">🎯 종합 퀴즈</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- 그룹 분류 탭 -->
+                <div id="group-tab" class="tab-panel active">
+                    <div class="study-section">
+                        <!-- 1그룹 동사 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                1그룹 동사 (5단 동사)
+                                <span class="group-badge">う단으로 끝나는 동사</span>
+                            </h2>
+                            
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">✅</span> 기본 규칙
+                                </div>
+                                <div class="rule-content">
+                                    <p>1그룹 동사는 <span class="highlight">う단</span>으로 끝나는 동사입니다.</p>
+                                    <p>끝나는 글자: う, く, ぐ, す, つ, ぬ, ぶ, む, る</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">📝</span> 대표적인 예시
+                                </div>
+                                <div class="example-grid">
+                                    <div class="example-item">
+                                        <div class="verb-jp">書く (かく)</div>
+                                        <div class="verb-info">쓰다</div>
+                                    </div>
+                                    <div class="example-item">
+                                        <div class="verb-jp">読む (よむ)</div>
+                                        <div class="verb-info">읽다</div>
+                                    </div>
+                                    <div class="example-item">
+                                        <div class="verb-jp">飲む (のむ)</div>
+                                        <div class="verb-info">마시다</div>
+                                    </div>
+                                    <div class="example-item">
+                                        <div class="verb-jp">話す (はなす)</div>
+                                        <div class="verb-info">말하다</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="exception-box">
+                                <div class="exception-title">
+                                    <span class="icon">⚠️</span> 주의사항
+                                </div>
+                                <p>• る로 끝나는 1그룹 동사들: 帰る(かえる), 入る(はいる), 走る(はしる), 切る(きる) 등</p>
+                                <p>• 이들은 る 앞이 <span class="highlight">あ단, う단, お단</span>인 경우가 많습니다</p>
+                            </div>
+                        </div>
+
+                        <!-- 2그룹 동사 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                2그룹 동사 (1단 동사)
+                                <span class="group-badge">る로 끝나는 동사</span>
+                            </h2>
+                            
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">✅</span> 기본 규칙
+                                </div>
+                                <div class="rule-content">
+                                    <p>2그룹 동사는 <span class="highlight">る</span>로 끝나면서, る 앞이 <span class="highlight">い단</span> 또는 <span class="highlight">え단</span>인 동사입니다.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">📝</span> 대표적인 예시
+                                </div>
+                                <div class="example-grid">
+                                    <div class="example-item">
+                                        <div class="verb-jp">食べる (たべる)</div>
+                                        <div class="verb-info">먹다</div>
+                                    </div>
+                                    <div class="example-item">
+                                        <div class="verb-jp">見る (みる)</div>
+                                        <div class="verb-info">보다</div>
+                                    </div>
+                                    <div class="example-item">
+                                        <div class="verb-jp">起きる (おきる)</div>
+                                        <div class="verb-info">일어나다</div>
+                                    </div>
+                                    <div class="example-item">
+                                        <div class="verb-jp">寝る (ねる)</div>
+                                        <div class="verb-info">자다</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3그룹 동사 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                3그룹 동사 (불규칙 동사)
+                                <span class="group-badge">する・来る 동사</span>
+                            </h2>
+                            
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">✅</span> 기본 규칙
+                                </div>
+                                <div class="rule-content">
+                                    <p>1. <span class="highlight">する</span> (하다) 와 する가 붙는 동사</p>
+                                    <p>2. <span class="highlight">来る(くる)</span> (오다)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 동사 활용 탭 -->
+                <div id="conjugation-tab" class="tab-panel">
+                    <div class="study-section">
+                        <!-- 1그룹 활용 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                1그룹 동사 활용법
+                                <span class="group-badge">5단 활용</span>
+                            </h2>
+                            
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">📖</span> 활용 규칙
+                                </div>
+                                <div class="rule-content">
+                                    <p>1그룹 동사는 어미의 <span class="highlight">う단을 い단으로 바꾸고</span> ます를 붙입니다.</p>
+                                </div>
+                            </div>
+
+                            <table class="conjugation-table">
+                                <thead>
+                                    <tr>
+                                        <th>기본형</th>
+                                        <th>변화 과정</th>
+                                        <th>ます형</th>
+                                        <th>ません형</th>
+                                        <th>ました형</th>
+                                        <th>ませんでした형</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="example"><ruby>書<rt>か</rt></ruby>く<br><small>쓰다</small></td>
+                                        <td>く → き</td>
+                                        <td class="example"><ruby>書<rt>か</rt></ruby>きます<br><small>씁니다</small></td>
+                                        <td class="example"><ruby>書<rt>か</rt></ruby>きません<br><small>쓰지 않습니다</small></td>
+                                        <td class="example"><ruby>書<rt>か</rt></ruby>きました<br><small>썼습니다</small></td>
+                                        <td class="example"><ruby>書<rt>か</rt></ruby>きませんでした<br><small>쓰지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>読<rt>よ</rt></ruby>む<br><small>읽다</small></td>
+                                        <td>む → み</td>
+                                        <td class="example"><ruby>読<rt>よ</rt></ruby>みます<br><small>읽습니다</small></td>
+                                        <td class="example"><ruby>読<rt>よ</rt></ruby>みません<br><small>읽지 않습니다</small></td>
+                                        <td class="example"><ruby>読<rt>よ</rt></ruby>みました<br><small>읽었습니다</small></td>
+                                        <td class="example"><ruby>読<rt>よ</rt></ruby>みませんでした<br><small>읽지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>話<rt>はな</rt></ruby>す<br><small>말하다</small></td>
+                                        <td>す → し</td>
+                                        <td class="example"><ruby>話<rt>はな</rt></ruby>します<br><small>말합니다</small></td>
+                                        <td class="example"><ruby>話<rt>はな</rt></ruby>しません<br><small>말하지 않습니다</small></td>
+                                        <td class="example"><ruby>話<rt>はな</rt></ruby>しました<br><small>말했습니다</small></td>
+                                        <td class="example"><ruby>話<rt>はな</rt></ruby>しませんでした<br><small>말하지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>立<rt>た</rt></ruby>つ<br><small>서다</small></td>
+                                        <td>つ → ち</td>
+                                        <td class="example"><ruby>立<rt>た</rt></ruby>ちます<br><small>섭니다</small></td>
+                                        <td class="example"><ruby>立<rt>た</rt></ruby>ちません<br><small>서지 않습니다</small></td>
+                                        <td class="example"><ruby>立<rt>た</rt></ruby>ちました<br><small>섰습니다</small></td>
+                                        <td class="example"><ruby>立<rt>た</rt></ruby>ちませんでした<br><small>서지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>死<rt>し</rt></ruby>ぬ<br><small>죽다</small></td>
+                                        <td>ぬ → に</td>
+                                        <td class="example"><ruby>死<rt>し</rt></ruby>にます<br><small>죽습니다</small></td>
+                                        <td class="example"><ruby>死<rt>し</rt></ruby>にません<br><small>죽지 않습니다</small></td>
+                                        <td class="example"><ruby>死<rt>し</rt></ruby>にました<br><small>죽었습니다</small></td>
+                                        <td class="example"><ruby>死<rt>し</rt></ruby>にませんでした<br><small>죽지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>遊<rt>あそ</rt></ruby>ぶ<br><small>놀다</small></td>
+                                        <td>ぶ → び</td>
+                                        <td class="example"><ruby>遊<rt>あそ</rt></ruby>びます<br><small>놉니다</small></td>
+                                        <td class="example"><ruby>遊<rt>あそ</rt></ruby>びません<br><small>놀지 않습니다</small></td>
+                                        <td class="example"><ruby>遊<rt>あそ</rt></ruby>びました<br><small>놀았습니다</small></td>
+                                        <td class="example"><ruby>遊<rt>あそ</rt></ruby>びませんでした<br><small>놀지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>作<rt>つく</rt></ruby>る<br><small>만들다</small></td>
+                                        <td>る → り</td>
+                                        <td class="example"><ruby>作<rt>つく</rt></ruby>ります<br><small>만듭니다</small></td>
+                                        <td class="example"><ruby>作<rt>つく</rt></ruby>りません<br><small>만들지 않습니다</small></td>
+                                        <td class="example"><ruby>作<rt>つく</rt></ruby>りました<br><small>만들었습니다</small></td>
+                                        <td class="example"><ruby>作<rt>つく</rt></ruby>りませんでした<br><small>만들지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>買<rt>か</rt></ruby>う<br><small>사다</small></td>
+                                        <td>う → い</td>
+                                        <td class="example"><ruby>買<rt>か</rt></ruby>います<br><small>삽니다</small></td>
+                                        <td class="example"><ruby>買<rt>か</rt></ruby>いません<br><small>사지 않습니다</small></td>
+                                        <td class="example"><ruby>買<rt>か</rt></ruby>いました<br><small>샀어요</small></td>
+                                        <td class="example"><ruby>買<rt>か</rt></ruby>いませんでした<br><small>사지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>泳<rt>およ</rt></ruby>ぐ<br><small>수영하다</small></td>
+                                        <td>ぐ → ぎ</td>
+                                        <td class="example"><ruby>泳<rt>およ</rt></ruby>ぎます<br><small>수영합니다</small></td>
+                                        <td class="example"><ruby>泳<rt>およ</rt></ruby>ぎません<br><small>수영하지 않습니다</small></td>
+                                        <td class="example"><ruby>泳<rt>およ</rt></ruby>ぎました<br><small>수영했습니다</small></td>
+                                        <td class="example"><ruby>泳<rt>およ</rt></ruby>ぎませんでした<br><small>수영하지 않았습니다</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 2그룹 활용 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                2그룹 동사 활용법
+                                <span class="group-badge">1단 활용</span>
+                            </h2>
+                            
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">📖</span> 활용 규칙
+                                </div>
+                                <div class="rule-content">
+                                    <p>2그룹 동사는 <span class="highlight">る를 떼고</span> ます를 붙입니다. (아주 간단!)</p>
+                                </div>
+                            </div>
+
+                            <table class="conjugation-table">
+                                <thead>
+                                    <tr>
+                                        <th>기본형</th>
+                                        <th>변화 과정</th>
+                                        <th>ます형</th>
+                                        <th>ません형</th>
+                                        <th>ました형</th>
+                                        <th>ませんでした형</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="example"><ruby>食<rt>た</rt></ruby>べる<br><small>먹다</small></td>
+                                        <td>る 제거</td>
+                                        <td class="example"><ruby>食<rt>た</rt></ruby>べます<br><small>먹어요</small></td>
+                                        <td class="example"><ruby>食<rt>た</rt></ruby>べません<br><small>먹지 않습니다</small></td>
+                                        <td class="example"><ruby>食<rt>た</rt></ruby>べました<br><small>먹었어요</small></td>
+                                        <td class="example"><ruby>食<rt>た</rt></ruby>べませんでした<br><small>먹지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>見<rt>み</rt></ruby>る<br><small>보다</small></td>
+                                        <td>る 제거</td>
+                                        <td class="example"><ruby>見<rt>み</rt></ruby>ます<br><small>봐요</small></td>
+                                        <td class="example"><ruby>見<rt>み</rt></ruby>ません<br><small>보지 않습니다</small></td>
+                                        <td class="example"><ruby>見<rt>み</rt></ruby>ました<br><small>봤어요</small></td>
+                                        <td class="example"><ruby>見<rt>み</rt></ruby>ませんでした<br><small>보지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>起<rt>お</rt></ruby>きる<br><small>일어나다</small></td>
+                                        <td>る 제거</td>
+                                        <td class="example"><ruby>起<rt>お</rt></ruby>きます<br><small>일어납니다</small></td>
+                                        <td class="example"><ruby>起<rt>お</rt></ruby>きません<br><small>일어나지 않습니다</small></td>
+                                        <td class="example"><ruby>起<rt>お</rt></ruby>きました<br><small>일어났습니다</small></td>
+                                        <td class="example"><ruby>起<rt>お</rt></ruby>きませんでした<br><small>일어나지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>寝<rt>ね</rt></ruby>る<br><small>자다</small></td>
+                                        <td>る 제거</td>
+                                        <td class="example"><ruby>寝<rt>ね</rt></ruby>ます<br><small>자요</small></td>
+                                        <td class="example"><ruby>寝<rt>ね</rt></ruby>ません<br><small>자지 않습니다</small></td>
+                                        <td class="example"><ruby>寝<rt>ね</rt></ruby>ました<br><small>잤어요</small></td>
+                                        <td class="example"><ruby>寝<rt>ね</rt></ruby>ませんでした<br><small>자지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>教<rt>おし</rt></ruby>える<br><small>가르치다</small></td>
+                                        <td>る 제거</td>
+                                        <td class="example"><ruby>教<rt>おし</rt></ruby>えます<br><small>가르칩니다</small></td>
+                                        <td class="example"><ruby>教<rt>おし</rt></ruby>えません<br><small>가르치지 않습니다</small></td>
+                                        <td class="example"><ruby>教<rt>おし</rt></ruby>えました<br><small>가르쳤습니다</small></td>
+                                        <td class="example"><ruby>教<rt>おし</rt></ruby>えませんでした<br><small>가르치지 않았습니다</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 3그룹 활용 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                3그룹 동사 활용법
+                                <span class="group-badge">불규칙 활용</span>
+                            </h2>
+                            
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">📖</span> 활용 규칙
+                                </div>
+                                <div class="rule-content">
+                                    <p>3그룹 동사는 <span class="highlight">완전히 불규칙적</span>으로 변화합니다. 외워야 합니다!</p>
+                                </div>
+                            </div>
+
+                            <table class="conjugation-table">
+                                <thead>
+                                    <tr>
+                                        <th>기본형</th>
+                                        <th>ます형</th>
+                                        <th>ません형</th>
+                                        <th>ました형</th>
+                                        <th>ませんでした형</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="example">する<br><small>하다</small></td>
+                                        <td class="example">します<br><small>합니다</small></td>
+                                        <td class="example">しません<br><small>하지 않습니다</small></td>
+                                        <td class="example">しました<br><small>했습니다</small></td>
+                                        <td class="example">しませんでした<br><small>하지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>来<rt>く</rt></ruby>る<br><small>오다</small></td>
+                                        <td class="example"><ruby>来<rt>き</rt></ruby>ます<br><small>옵니다</small></td>
+                                        <td class="example"><ruby>来<rt>き</rt></ruby>ません<br><small>오지 않습니다</small></td>
+                                        <td class="example"><ruby>来<rt>き</rt></ruby>ました<br><small>왔습니다</small></td>
+                                        <td class="example"><ruby>来<rt>き</rt></ruby>ませんでした<br><small>오지 않았습니다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="example"><ruby>勉強<rt>べんきょう</rt></ruby>する<br><small>공부하다</small></td>
+                                        <td class="example"><ruby>勉強<rt>べんきょう</rt></ruby>します<br><small>공부합니다</small></td>
+                                        <td class="example"><ruby>勉強<rt>べんきょう</rt></ruby>しません<br><small>공부하지 않습니다</small></td>
+                                        <td class="example"><ruby>勉強<rt>べんきょう</rt></ruby>しました<br><small>공부했습니다</small></td>
+                                        <td class="example"><ruby>勉強<rt>べんきょう</rt></ruby>しませんでした<br><small>공부하지 않았습니다</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="exception-box">
+                                <div class="exception-title">
+                                    <span class="icon">💡</span> 주의: 来る의 발음 변화
+                                </div>
+                                <p>来る(くる) [kuru] '오다'는 ます형이 되면 발음이 <span class="highlight">きます [kimasu]</span>로 변합니다!</p>
+                                <p>예: 日本に来る (にほんにくる) → 日本に来ます (にほんにきます) - 일본에 옵니다 (조사 に: ~에)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 조사 사용법 탭 -->
+                <div id="particle-tab" class="tab-panel">
+                    <div class="study-section">
+                        <div class="group-card particle-card">
+                            <h2 class="group-title">
+                                동사와 조사: を vs に
+                                <span class="group-badge">올바른 조사 선택하기</span>
+                            </h2>
+
+                            <div class="particle-comparison">
+                                <div class="particle-box wo">
+                                    <div class="particle-title">を (직접 목적격)</div>
+                                    <div class="rule-content">
+                                        <p><strong>✅ 사용 원칙:</strong></p>
+                                        <p>• 직접적인 동작의 대상</p>
+                                        <p>• 타동사와 함께 사용</p>
+                                        <p>• "~을/를" 의미</p>
+                                        <br>
+                                        <p><strong>📝 주요 동사:</strong></p>
+                                        <p>• <ruby>食<rt>た</rt></ruby>べる (먹다) - パンを<ruby>食<rt>た</rt></ruby>べる</p>
+                                        <p>• <ruby>飲<rt>の</rt></ruby>む (마시다) - <ruby>水<rt>みず</rt></ruby>を<ruby>飲<rt>の</rt></ruby>む</p>
+                                        <p>• <ruby>読<rt>よ</rt></ruby>む (읽다) - <ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>む</p>
+                                        <p>• <ruby>書<rt>か</rt></ruby>く (쓰다) - <ruby>手紙<rt>てがみ</rt></ruby>を<ruby>書<rt>か</rt></ruby>く</p>
+                                        <p>• <ruby>見<rt>み</rt></ruby>る (보다) - <ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>る</p>
+                                        <p>• <ruby>聞<rt>き</rt></ruby>く (듣다) - <ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>く</p>
+                                        <p>• <ruby>買<rt>か</rt></ruby>う (사다) - <ruby>服<rt>ふく</rt></ruby>を<ruby>買<rt>か</rt></ruby>う</p>
+                                        <p>• <ruby>作<rt>つく</rt></ruby>る (만들다) - <ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>る</p>
+                                        <p>• <ruby>勉強<rt>べんきょう</rt></ruby>する (공부하다) - <ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>する</p>
+                                    </div>
+                                </div>
+
+                                <div class="particle-box ni">
+                                    <div class="particle-title">に (간접 목적격/방향)</div>
+                                    <div class="rule-content">
+                                        <p><strong>✅ 사용 원칙:</strong></p>
+                                        <p>• 목적지, 도착점</p>
+                                        <p>• 시간, 존재 위치</p>
+                                        <p>• "~에/에게" 의미</p>
+                                        <br>
+                                        <p><strong>📝 주요 동사:</strong></p>
+                                        <p>• <ruby>行<rt>い</rt></ruby>く (가다) - <ruby>学校<rt>がっこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>く</p>
+                                        <p>• <ruby>来<rt>く</rt></ruby>る (오다) - <ruby>日本<rt>にほん</rt></ruby>に<ruby>来<rt>く</rt></ruby>る</p>
+                                        <p>• <ruby>帰<rt>かえ</rt></ruby>る (돌아가다) - <ruby>家<rt>いえ</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>る</p>
+                                        <p>• <ruby>入<rt>はい</rt></ruby>る (들어가다) - <ruby>部屋<rt>へや</rt></ruby>に<ruby>入<rt>はい</rt></ruby>る</p>
+                                        <p>• <ruby>乗<rt>の</rt></ruby>る (타다) - バスに<ruby>乗<rt>の</rt></ruby>る</p>
+                                        <p>• <ruby>会<rt>あ</rt></ruby>う (만나다) - <ruby>友達<rt>ともだち</rt></ruby>に<ruby>会<rt>あ</rt></ruby>う</p>
+                                        <p>• あげる (주다) - <ruby>彼<rt>かれ</rt></ruby>に<ruby>本<rt>ほん</rt></ruby>をあげる</p>
+                                        <p>• なる (되다) - <ruby>医者<rt>いしゃ</rt></ruby>になる</p>
+                                        <p>• <ruby>住<rt>す</rt></ruby>む (살다) - <ruby>東京<rt>とうきょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>む</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">🎯</span> 특별 주의 동사들
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>1. 両方使える動詞 (둘 다 사용 가능하지만 의미가 다름)</strong></p>
+                                    <p>• <span class="highlight"><ruby>登<rt>のぼ</rt></ruby>る</span></p>
+                                    <p>　- <ruby>山<rt>やま</rt></ruby>を<ruby>登<rt>のぼ</rt></ruby>る (산을 오르다 - 경로)</p>
+                                    <p>　- <ruby>山<rt>やま</rt></ruby>に<ruby>登<rt>のぼ</rt></ruby>る (산에 오르다 - 목적지)</p>
+                                    <br>
+                                    <p>• <span class="highlight"><ruby>出<rt>で</rt></ruby>る</span></p>
+                                    <p>　- <ruby>部屋<rt>へや</rt></ruby>を<ruby>出<rt>で</rt></ruby>る (방을 나가다 - 떠나는 장소)</p>
+                                    <p>　- <ruby>外<rt>そと</rt></ruby>に<ruby>出<rt>で</rt></ruby>る (밖에 나가다 - 도착점)</p>
+                                    <br>
+                                    <p><strong>2. 헷갈리기 쉬운 동사</strong></p>
+                                    <p>• <ruby>電話<rt>でんわ</rt></ruby>する → <ruby>友達<rt>ともだち</rt></ruby><span class="highlight">に</span><ruby>電話<rt>でんわ</rt></ruby>する (친구에게 전화하다)</p>
+                                    <p>• <ruby>質問<rt>しつもん</rt></ruby>する → <ruby>先生<rt>せんせい</rt></ruby><span class="highlight">に</span><ruby>質問<rt>しつもん</rt></ruby>する (선생님께 질문하다)</p>
+                                    <p>• <ruby>似<rt>に</rt></ruby>る → <ruby>母<rt>はは</rt></ruby><span class="highlight">に</span><ruby>似<rt>に</rt></ruby>る (어머니를 닮다)</p>
+                                </div>
+                            </div>
+
+                            <div class="exception-box">
+                                <div class="exception-title">
+                                    <span class="icon">⚠️</span> 중요 예외
+                                </div>
+                                <p><strong>移動 동사의 경우:</strong></p>
+                                <p>• <ruby>公園<rt>こうえん</rt></ruby><span class="highlight">を</span><ruby>散歩<rt>さんぽ</rt></ruby>する (공원을 산책하다) - 이동 경로</p>
+                                <p>• <ruby>空<rt>そら</rt></ruby><span class="highlight">を</span><ruby>飛<rt>と</rt></ruby>ぶ (하늘을 날다) - 이동 공간</p>
+                                <p>• <ruby>橋<rt>はし</rt></ruby><span class="highlight">を</span><ruby>渡<rt>わた</rt></ruby>る (다리를 건너다) - 통과 장소</p>
+                                <br>
+                                <p><strong><ruby>出<rt>で</rt></ruby>る・<ruby>卒業<rt>そつぎょう</rt></ruby>する 등:</strong></p>
+                                <p>• <ruby>大学<rt>だいがく</rt></ruby><span class="highlight">を</span><ruby>卒業<rt>そつぎょう</rt></ruby>する (대학을 졸업하다)</p>
+                                <p>• <ruby>駅<rt>えき</rt></ruby><span class="highlight">を</span><ruby>出<rt>で</rt></ruby>る (역을 나가다)</p>
+                            </div>
+                        </div>
+
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                💡 조사 선택 꿀팁
+                            </h2>
+                            
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">🎯</span> 빠른 판단법
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>STEP 1:</strong> 동사의 의미를 생각해보세요</p>
+                                    <p>• 무언가를 직접 하는 동작? → <span class="highlight">を</span></p>
+                                    <p>• 어디론가 가는/향하는 동작? → <span class="highlight">に</span></p>
+                                    <br>
+                                    <p><strong>STEP 2:</strong> 한국어로 번역해보세요</p>
+                                    <p>• "~을/를" → <span class="highlight">を</span></p>
+                                    <p>• "~에/에게" → <span class="highlight">に</span></p>
+                                    <br>
+                                    <p><strong>STEP 3:</strong> 동사 종류 확인</p>
+                                    <p>• 타동사 (다른 대상에 영향) → 주로 <span class="highlight">を</span></p>
+                                    <p>• 자동사 (스스로의 동작) → 주로 <span class="highlight">に</span> 또는 조사 없음</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 종합 퀴즈 탭 -->
+                <div id="quiz-tab" class="tab-panel">
+                    <div class="quiz-selector">
+                        <div class="quiz-type-card selected" onclick="selectQuizType('group')">
+                            <div class="quiz-type-title">📚 그룹 분류</div>
+                            <div class="quiz-type-desc">동사가 1, 2, 3그룹 중 어디에 속하는지 맞추기</div>
+                        </div>
+                        <div class="quiz-type-card" onclick="selectQuizType('conjugation')">
+                            <div class="quiz-type-title">✏️ 동사 활용</div>
+                            <div class="quiz-type-desc">ます형, ません형 등으로 올바르게 활용하기</div>
+                        </div>
+                        <div class="quiz-type-card" onclick="selectQuizType('particle')">
+                            <div class="quiz-type-title">🔤 조사 선택</div>
+                            <div class="quiz-type-desc">を와 に 중 올바른 조사 선택하기</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-stats">
+                        <div class="stat-card">
+                            <div class="stat-label">총 문제</div>
+                            <div class="stat-value" id="total-count">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">정답</div>
+                            <div class="stat-value" id="correct-count">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">오답</div>
+                            <div class="stat-value" id="wrong-count">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">정답률</div>
+                            <div class="stat-value" id="accuracy">0%</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-area">
+                        <div class="question-display" id="question-display">
+                            <!-- 동적으로 생성됨 -->
+                        </div>
+
+                        <div class="result-message" id="result-message"></div>
+
+                        <div id="answer-section">
+                            <!-- 동적으로 생성됨 -->
+                        </div>
+
+                        <button class="next-btn" id="next-btn" onclick="nextQuestion()">다음 문제 →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 동사 데이터베이스 (한국어 번역과 로마자 발음 포함)
+        const verbs = [
+            // 1그룹 동사 (5단 동사 - 어미가 う단으로 끝남)
+            { verb: '書く', reading: 'かく', romaji: 'kaku', meaning: '쓰다', group: 1, masu: '書きます', masuRomaji: 'kakimasu', particle: 'を', example: '手紙を書く (tegami wo kaku) - 편지를 쓰다', tip: 'く→き로 변화 (ku→ki)' },
+            { verb: '読む', reading: 'よむ', romaji: 'yomu', meaning: '읽다', group: 1, masu: '読みます', masuRomaji: 'yomimasu', particle: 'を', example: '本を読む (hon wo yomu) - 책을 읽다', tip: 'む→み로 변화 (mu→mi)' },
+            { verb: '飲む', reading: 'のむ', romaji: 'nomu', meaning: '마시다', group: 1, masu: '飲みます', masuRomaji: 'nomimasu', particle: 'を', example: '水を飲む (mizu wo nomu) - 물을 마시다', tip: 'む→み로 변화 (mu→mi)' },
+            { verb: '話す', reading: 'はなす', romaji: 'hanasu', meaning: '말하다', group: 1, masu: '話します', masuRomaji: 'hanashimasu', particle: 'を', example: '日本語を話す (nihongo wo hanasu) - 일본어를 말하다', tip: 'す→し로 변화 (su→shi)' },
+            { verb: '聞く', reading: 'きく', romaji: 'kiku', meaning: '듣다', group: 1, masu: '聞きます', masuRomaji: 'kikimasu', particle: 'を', example: '音楽を聞く (ongaku wo kiku) - 음악을 듣다', tip: 'く→き로 변화 (ku→ki)' },
+            { verb: '立つ', reading: 'たつ', romaji: 'tatsu', meaning: '서다', group: 1, masu: '立ちます', masuRomaji: 'tachimasu', particle: null, example: '立つ (tatsu) - 서다', tip: 'つ→ち로 변화 (tsu→chi)' },
+            { verb: '座る', reading: 'すわる', romaji: 'suwaru', meaning: '앉다', group: 1, masu: '座ります', masuRomaji: 'suwarimasu', particle: 'に', example: '椅子に座る (isu ni suwaru) - 의자에 앉다', tip: 'る→り로 변화 (ru→ri) - 1그룹 예외동사' },
+            { verb: '買う', reading: 'かう', romaji: 'kau', meaning: '사다', group: 1, masu: '買います', masuRomaji: 'kaimasu', particle: 'を', example: '服を買う (fuku wo kau) - 옷을 사다', tip: 'う→い로 변화 (u→i)' },
+            { verb: '待つ', reading: 'まつ', romaji: 'matsu', meaning: '기다리다', group: 1, masu: '待ちます', masuRomaji: 'machimasu', particle: 'を', example: '友達を待つ (tomodachi wo matsu) - 친구를 기다리다', tip: 'つ→ち로 변화 (tsu→chi)' },
+            { verb: '死ぬ', reading: 'しぬ', romaji: 'shinu', meaning: '죽다', group: 1, masu: '死にます', masuRomaji: 'shinimasu', particle: null, example: '死ぬ (shinu) - 죽다', tip: 'ぬ→に로 변화 (nu→ni) - 드문 어미' },
+            { verb: '遊ぶ', reading: 'あそぶ', romaji: 'asobu', meaning: '놀다', group: 1, masu: '遊びます', masuRomaji: 'asobimasu', particle: null, example: '公園で遊ぶ (kouen de asobu) - 공원에서 놀다', tip: 'ぶ→び로 변화 (bu→bi)' },
+            { verb: '泳ぐ', reading: 'およぐ', romaji: 'oyogu', meaning: '수영하다', group: 1, masu: '泳ぎます', masuRomaji: 'oyogimasu', particle: null, example: '海で泳ぐ (umi de oyogu) - 바다에서 수영하다', tip: 'ぐ→ぎ로 변화 (gu→gi)' },
+            { verb: '作る', reading: 'つくる', romaji: 'tsukuru', meaning: '만들다', group: 1, masu: '作ります', masuRomaji: 'tsukurimasu', particle: 'を', example: '料理を作る (ryouri wo tsukuru) - 요리를 만들다', tip: 'る→り로 변화 (ru→ri) - 1그룹 예외동사' },
+            { verb: '売る', reading: 'うる', romaji: 'uru', meaning: '팔다', group: 1, masu: '売ります', masuRomaji: 'urimasu', particle: 'を', example: '本を売る (hon wo uru) - 책을 팔다', tip: 'る→り로 변화 (ru→ri) - 1그룹 예외동사' },
+            { verb: '取る', reading: 'とる', romaji: 'toru', meaning: '가지다', group: 1, masu: '取ります', masuRomaji: 'torimasu', particle: 'を', example: '写真を取る (shashin wo toru) - 사진을 찍다', tip: 'る→り로 변화 (ru→ri) - 1그룹 예외동사' },
+            { verb: '歩く', reading: 'あるく', romaji: 'aruku', meaning: '걷다', group: 1, masu: '歩きます', masuRomaji: 'arukimasu', particle: null, example: '道を歩く (michi wo aruku) - 길을 걷다', tip: 'く→き로 변화 (ku→ki)' },
+            { verb: '働く', reading: 'はたらく', romaji: 'hataraku', meaning: '일하다', group: 1, masu: '働きます', masuRomaji: 'hatarakimasu', particle: null, example: '会社で働く (kaisha de hataraku) - 회사에서 일하다', tip: 'く→き로 변화 (ku→ki)' },
+            { verb: '休む', reading: 'やすむ', romaji: 'yasumu', meaning: '쉬다', group: 1, masu: '休みます', masuRomaji: 'yasumimasu', particle: 'を', example: '学校を休む (gakkou wo yasumu) - 학교를 쉬다', tip: 'む→み로 변화 (mu→mi)' },
+            { verb: '思う', reading: 'おもう', romaji: 'omou', meaning: '생각하다', group: 1, masu: '思います', masuRomaji: 'omoimasu', particle: 'を', example: 'あなたを思う (anata wo omou) - 당신을 생각하다', tip: 'う→い로 변화 (u→i)' },
+            { verb: '言う', reading: 'いう', romaji: 'iu', meaning: '말하다', group: 1, masu: '言います', masuRomaji: 'iimasu', particle: 'を', example: '本当のことを言う (hontou no koto wo iu) - 진실을 말하다', tip: 'う→い로 변화 (u→i)' },
+            { verb: '持つ', reading: 'もつ', romaji: 'motsu', meaning: '가지다', group: 1, masu: '持ちます', masuRomaji: 'mochimasu', particle: 'を', example: 'カバンを持つ (kaban wo motsu) - 가방을 가지다', tip: 'つ→ち로 변화 (tsu→chi)' },
+            { verb: '住む', reading: 'すむ', romaji: 'sumu', meaning: '살다', group: 1, masu: '住みます', masuRomaji: 'sumimasu', particle: 'に', example: '東京に住む (toukyou ni sumu) - 도쿄에 살다', tip: 'む→み로 변화 (mu→mi)' },
+            { verb: '知る', reading: 'しる', romaji: 'shiru', meaning: '알다', group: 1, masu: '知ります', masuRomaji: 'shirimasu', particle: 'を', example: '日本語を知る (nihongo wo shiru) - 일본어를 알다', tip: 'る→り로 변화 (ru→ri) - 1그룹 예외동사' },
+            { verb: '入る', reading: 'はいる', romaji: 'hairu', meaning: '들어가다', group: 1, masu: '入ります', masuRomaji: 'hairimasu', particle: 'に', example: '部屋に入る (heya ni hairu) - 방에 들어가다', tip: 'る→り로 변화 (ru→ri) - 1그룹 예외동사' },
+            { verb: '帰る', reading: 'かえる', romaji: 'kaeru', meaning: '돌아오다', group: 1, masu: '帰ります', masuRomaji: 'kaerimasu', particle: 'に', example: '家に帰る (ie ni kaeru) - 집에 돌아가다', tip: 'る→り로 변화 (ru→ri) - 1그룹 예외동사' },
+            { verb: '切る', reading: 'きる', romaji: 'kiru', meaning: '자르다', group: 1, masu: '切ります', masuRomaji: 'kirimasu', particle: 'を', example: '紙を切る (kami wo kiru) - 종이를 자르다', tip: 'る→り로 변화 (ru→ri) - 1그룹 예외동사' },
+            { verb: '走る', reading: 'はしる', romaji: 'hashiru', meaning: '달리다', group: 1, masu: '走ります', masuRomaji: 'hashirimasu', particle: null, example: '公園で走る (kouen de hashiru) - 공원에서 달리다', tip: 'る→り로 변화 (ru→ri) - 1그룹 예외동사' },
+            { verb: '行く', reading: 'いく', romaji: 'iku', meaning: '가다', group: 1, masu: '行きます', masuRomaji: 'ikimasu', particle: 'に', example: '学校に行く (gakkou ni iku) - 학교에 가다', tip: 'く→き로 변화 (ku→ki)' },
+            { verb: '会う', reading: 'あう', romaji: 'au', meaning: '만나다', group: 1, masu: '会います', masuRomaji: 'aimasu', particle: 'に', example: '友達に会う (tomodachi ni au) - 친구를 만나다', tip: 'う→い로 변화 (u→i)' },
+            { verb: '乗る', reading: 'のる', romaji: 'noru', meaning: '타다', group: 1, masu: '乗ります', masuRomaji: 'norimasu', particle: 'に', example: '電車に乗る (densha ni noru) - 전철을 타다', tip: 'る→り로 변화 (ru→ri) - 1그룹 예외동사' },
+            
+            // 2그룹 동사 (1단 동사 - る로 끝나고 る 앞이 い/え단)
+            { verb: '食べる', reading: 'たべる', romaji: 'taberu', meaning: '먹다', group: 2, masu: '食べます', masuRomaji: 'tabemasu', particle: 'を', example: 'パンを食べる (pan wo taberu) - 빵을 먹다', tip: 'る를 떼고 ます 추가 (간단!)' },
+            { verb: '見る', reading: 'みる', romaji: 'miru', meaning: '보다', group: 2, masu: '見ます', masuRomaji: 'mimasu', particle: 'を', example: '映画を見る (eiga wo miru) - 영화를 보다', tip: 'る를 떼고 ます 추가' },
+            { verb: '起きる', reading: 'おきる', romaji: 'okiru', meaning: '일어나다', group: 2, masu: '起きます', masuRomaji: 'okimasu', particle: null, example: '朝起きる (asa okiru) - 아침에 일어나다', tip: 'る를 떼고 ます 추가' },
+            { verb: '寝る', reading: 'ねる', romaji: 'neru', meaning: '자다', group: 2, masu: '寝ます', masuRomaji: 'nemasu', particle: null, example: '夜寝る (yoru neru) - 밤에 자다', tip: 'る를 떼고 ます 추가' },
+            { verb: '教える', reading: 'おしえる', romaji: 'oshieru', meaning: '가르치다', group: 2, masu: '教えます', masuRomaji: 'oshiemasu', particle: 'を', example: '日本語を教える (nihongo wo oshieru) - 일본어를 가르치다', tip: 'る를 떼고 ます 추가' },
+            { verb: '着る', reading: 'きる', romaji: 'kiru', meaning: '입다', group: 2, masu: '着ます', masuRomaji: 'kimasu', particle: 'を', example: '服を着る (fuku wo kiru) - 옷을 입다', tip: 'る를 떼고 ます 추가' },
+            { verb: '出る', reading: 'でる', romaji: 'deru', meaning: '나가다', group: 2, masu: '出ます', masuRomaji: 'demasu', particle: 'を', example: '部屋を出る (heya wo deru) - 방을 나가다', tip: 'る를 떼고 ます 추가' },
+            { verb: '答える', reading: 'こたえる', romaji: 'kotaeru', meaning: '대답하다', group: 2, masu: '答えます', masuRomaji: 'kotaemasu', particle: 'に', example: '質問に答える (shitsumon ni kotaeru) - 질문에 대답하다', tip: 'る를 떼고 ます 추가' },
+            { verb: '覚える', reading: 'おぼえる', romaji: 'oboeru', meaning: '외우다', group: 2, masu: '覚えます', masuRomaji: 'oboemasu', particle: 'を', example: '単語を覚える (tango wo oboeru) - 단어를 외우다', tip: 'る를 떼고 ます 추가' },
+            { verb: '忘れる', reading: 'わすれる', romaji: 'wasureru', meaning: '잊다', group: 2, masu: '忘れます', masuRomaji: 'wasuremasu', particle: 'を', example: '名前を忘れる (namae wo wasureru) - 이름을 잊다', tip: 'る를 떼고 ます 추가' },
+            { verb: '開ける', reading: 'あける', romaji: 'akeru', meaning: '열다', group: 2, masu: '開けます', masuRomaji: 'akemasu', particle: 'を', example: 'ドアを開ける (doa wo akeru) - 문을 열다', tip: 'る를 떼고 ます 추가' },
+            { verb: '閉める', reading: 'しめる', romaji: 'shimeru', meaning: '닫다', group: 2, masu: '閉めます', masuRomaji: 'shimemasu', particle: 'を', example: '窓を閉める (mado wo shimeru) - 창문을 닫다', tip: 'る를 떼고 ます 추가' },
+            { verb: '始める', reading: 'はじめる', romaji: 'hajimeru', meaning: '시작하다', group: 2, masu: '始めます', masuRomaji: 'hajimemasu', particle: 'を', example: '勉強を始める (benkyou wo hajimeru) - 공부를 시작하다', tip: 'る를 떼고 ます 추가' },
+            { verb: 'あげる', reading: 'あげる', romaji: 'ageru', meaning: '주다', group: 2, masu: 'あげます', masuRomaji: 'agemasu', particle: 'に', example: '友達に本をあげる (tomodachi ni hon wo ageru) - 친구에게 책을 주다', tip: 'る를 떼고 ます 추가' },
+            
+            // 3그룹 동사 (불규칙 동사 - する/来る와 그 복합어)
+            { verb: 'する', reading: 'する', romaji: 'suru', meaning: '하다', group: 3, masu: 'します', masuRomaji: 'shimasu', particle: 'を', example: '宿題をする (shukudai wo suru) - 숙제를 하다', tip: '완전 불규칙! する→します' },
+            { verb: '勉強する', reading: 'べんきょうする', romaji: 'benkyou suru', meaning: '공부하다', group: 3, masu: '勉強します', masuRomaji: 'benkyou shimasu', particle: 'を', example: '日本語を勉強する (nihongo wo benkyou suru) - 일본어를 공부하다', tip: 'する 부분만 します로 변화' },
+            { verb: '運動する', reading: 'うんどうする', romaji: 'undou suru', meaning: '운동하다', group: 3, masu: '運動します', masuRomaji: 'undou shimasu', particle: null, example: '毎日運動する (mainichi undou suru) - 매일 운동하다', tip: 'する 부분만 します로 변화' },
+            { verb: '料理する', reading: 'りょうりする', romaji: 'ryouri suru', meaning: '요리하다', group: 3, masu: '料理します', masuRomaji: 'ryouri shimasu', particle: 'を', example: '夕食を料理する (yuushoku wo ryouri suru) - 저녁을 요리하다', tip: 'する 부분만 します로 변화' },
+            { verb: '電話する', reading: 'でんわする', romaji: 'denwa suru', meaning: '전화하다', group: 3, masu: '電話します', masuRomaji: 'denwa shimasu', particle: 'に', example: '友達に電話する (tomodachi ni denwa suru) - 친구에게 전화하다', tip: 'する 부분만 します로 변화' },
+            { verb: '質問する', reading: 'しつもんする', romaji: 'shitsumon suru', meaning: '질문하다', group: 3, masu: '質問します', masuRomaji: 'shitsumon shimasu', particle: 'に', example: '先生に質問する (sensei ni shitsumon suru) - 선생님께 질문하다', tip: 'する 부분만 します로 변화' },
+            { verb: '来る', reading: 'くる', romaji: 'kuru', meaning: '오다', group: 3, masu: '来ます(きます)', masuRomaji: 'kimasu', particle: 'に', example: '日本に来る (nihon ni kuru) - 일본에 오다', tip: '특별 불규칙! くる→きます (발음 변화 주의)' }
+        ];
+
+        // 조사 문제용 예문 (로마자와 상세 설명 포함)
+        const particleSentences = [
+            { sentence: '本___読む', answer: 'を', verb: '読む', romaji: 'hon wo yomu', korean: '책을 읽다', explanation: '읽다는 타동사로 직접 목적어에 を를 사용합니다' },
+            { sentence: '学校___行く', answer: 'に', verb: '行く', romaji: 'gakkou ni iku', korean: '학교에 가다', explanation: '가다는 이동동사로 목적지에 に를 사용합니다' },
+            { sentence: '水___飲む', answer: 'を', verb: '飲む', romaji: 'mizu wo nomu', korean: '물을 마시다', explanation: '마시다는 타동사로 직접 목적어에 を를 사용합니다' },
+            { sentence: '友達___会う', answer: 'に', verb: '会う', romaji: 'tomodachi ni au', korean: '친구를 만나다', explanation: '만나다는 상대에게 하는 동작으로 に를 사용합니다' },
+            { sentence: '音楽___聞く', answer: 'を', verb: '聞く', romaji: 'ongaku wo kiku', korean: '음악을 듣다', explanation: '듣다는 타동사로 직접 목적어에 を를 사용합니다' },
+            { sentence: '電車___乗る', answer: 'に', verb: '乗る', romaji: 'densha ni noru', korean: '전철을 타다', explanation: '타다는 이동 수단에 오르는 동작으로 に를 사용합니다' },
+            { sentence: '手紙___書く', answer: 'を', verb: '書く', romaji: 'tegami wo kaku', korean: '편지를 쓰다', explanation: '쓰다는 타동사로 직접 목적어에 を를 사용합니다' },
+            { sentence: '家___帰る', answer: 'に', verb: '帰る', romaji: 'ie ni kaeru', korean: '집에 돌아가다', explanation: '돌아가다는 이동동사로 목적지에 に를 사용합니다' },
+            { sentence: '映画___見る', answer: 'を', verb: '見る', romaji: 'eiga wo miru', korean: '영화를 보다', explanation: '보다는 타동사로 직접 목적어에 を를 사용합니다' },
+            { sentence: '日本___来る', answer: 'に', verb: '来る', romaji: 'nihon ni kuru', korean: '일본에 오다', explanation: '오다는 이동동사로 목적지에 に를 사용합니다' },
+            { sentence: '宿題___する', answer: 'を', verb: 'する', romaji: 'shukudai wo suru', korean: '숙제를 하다', explanation: '하다는 타동사로 직접 목적어에 を를 사용합니다' },
+            { sentence: '椅子___座る', answer: 'に', verb: '座る', romaji: 'isu ni suwaru', korean: '의자에 앉다', explanation: '앉다는 위치를 나타내는 に를 사용합니다' },
+            { sentence: 'パン___食べる', answer: 'を', verb: '食べる', romaji: 'pan wo taberu', korean: '빵을 먹다', explanation: '먹다는 타동사로 직접 목적어에 を를 사용합니다' },
+            { sentence: '部屋___入る', answer: 'に', verb: '入る', romaji: 'heya ni hairu', korean: '방에 들어가다', explanation: '들어가다는 이동동사로 목적지에 に를 사용합니다' },
+            { sentence: '服___着る', answer: 'を', verb: '着る', romaji: 'fuku wo kiru', korean: '옷을 입다', explanation: '입다는 타동사로 직접 목적어에 을를 사용합니다' },
+            { sentence: '東京___住む', answer: 'に', verb: '住む', romaji: 'toukyou ni sumu', korean: '도쿄에 살다', explanation: '살다는 거주 장소를 나타내는 に를 사용합니다' },
+            { sentence: '友達___電話する', answer: 'に', verb: '電話する', romaji: 'tomodachi ni denwa suru', korean: '친구에게 전화하다', explanation: '전화하다는 상대방에게 하는 동작으로 에를 사용합니다' },
+            { sentence: '先生___質問する', answer: 'に', verb: '質問する', romaji: 'sensei ni shitsumon suru', korean: '선생님께 질문하다', explanation: '질문하다는 상대방에게 하는 동작으로 に를 사용합니다' },
+            { sentence: '日本語___勉強する', answer: 'を', verb: '勉強する', romaji: 'nihongo wo benkyou suru', korean: '일본어를 공부하다', explanation: '공부하다는 타동사로 직접 목적어에 을를 사용합니다' },
+            { sentence: '彼___本をあげる', answer: 'に', verb: 'あげる', romaji: 'kare ni hon wo ageru', korean: '그에게 책을 주다', explanation: '주다는 받는 사람에게 に를 사용합니다' }
+        ];
+
+        // 퀴즈 상태 변수
+        let currentQuizType = 'group';
+        let currentQuestion = null;
+        let totalQuestions = 0;
+        let correctAnswers = 0;
+        let wrongAnswers = 0;
+        let isAnswered = false;
+
+        // 탭 전환 함수
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            
+            if (tabName === 'group') {
+                document.querySelectorAll('.tab-btn')[0].classList.add('active');
+                document.getElementById('group-tab').classList.add('active');
+            } else if (tabName === 'conjugation') {
+                document.querySelectorAll('.tab-btn')[1].classList.add('active');
+                document.getElementById('conjugation-tab').classList.add('active');
+            } else if (tabName === 'particle') {
+                document.querySelectorAll('.tab-btn')[2].classList.add('active');
+                document.getElementById('particle-tab').classList.add('active');
+            } else if (tabName === 'quiz') {
+                document.querySelectorAll('.tab-btn')[3].classList.add('active');
+                document.getElementById('quiz-tab').classList.add('active');
+                if (!currentQuestion) {
+                    nextQuestion();
+                }
+            }
+        }
+
+        // 퀴즈 타입 선택
+        function selectQuizType(type) {
+            currentQuizType = type;
+            document.querySelectorAll('.quiz-type-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+            nextQuestion();
+        }
+
+        // 새 문제 생성
+        function nextQuestion() {
+            isAnswered = false;
+            document.getElementById('result-message').classList.remove('show', 'correct', 'incorrect');
+            document.getElementById('next-btn').classList.remove('show');
+            
+            if (currentQuizType === 'group') {
+                generateGroupQuestion();
+            } else if (currentQuizType === 'conjugation') {
+                generateConjugationQuestion();
+            } else if (currentQuizType === 'particle') {
+                generateParticleQuestion();
+            }
+        }
+
+        // 그룹 분류 문제 생성
+        function generateGroupQuestion() {
+            currentQuestion = verbs[Math.floor(Math.random() * verbs.length)];
+            
+            document.getElementById('question-display').innerHTML = `
+                <div class="main-verb">${currentQuestion.verb}</div>
+                <div class="verb-reading">${currentQuestion.reading}${currentQuestion.romaji ? ' [' + currentQuestion.romaji + ']' : ''}</div>
+                <div class="verb-meaning">${currentQuestion.meaning}</div>
+            `;
+            
+            document.getElementById('answer-section').innerHTML = `
+                <div class="answer-options">
+                    <button class="answer-btn" onclick="checkGroupAnswer(1)">1그룹 (5단 동사)</button>
+                    <button class="answer-btn" onclick="checkGroupAnswer(2)">2그룹 (1단 동사)</button>
+                    <button class="answer-btn" onclick="checkGroupAnswer(3)">3그룹 (불규칙 동사)</button>
+                </div>
+            `;
+        }
+
+        // 활용 문제 생성
+        function generateConjugationQuestion() {
+            currentQuestion = verbs[Math.floor(Math.random() * verbs.length)];
+            const forms = ['ます', 'ません', 'ました', 'ませんでした'];
+            const selectedForm = forms[Math.floor(Math.random() * forms.length)];
+            currentQuestion.selectedForm = selectedForm;
+            currentQuestion.correctAnswer = getConjugatedForm(currentQuestion, selectedForm);
+            
+            document.getElementById('question-display').innerHTML = `
+                <div class="question-text">${currentQuestion.verb} (${currentQuestion.reading}) 를</div>
+                <div class="question-text"><span class="highlight">${selectedForm}</span> 형으로 활용하세요</div>
+                <div class="verb-reading">${currentQuestion.romaji ? '[' + currentQuestion.romaji + ']' : ''}</div>
+                <div class="verb-meaning">${currentQuestion.meaning}</div>
+            `;
+            
+            document.getElementById('answer-section').innerHTML = `
+                <input type="text" class="input-field" id="conjugation-input" placeholder="활용형을 입력하세요" autocomplete="off">
+                <button class="submit-btn" onclick="checkConjugationAnswer()">정답 확인</button>
+            `;
+            
+            // Enter 키 이벤트 추가
+            document.getElementById('conjugation-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    checkConjugationAnswer();
+                }
+            });
+        }
+
+        // 조사 문제 생성
+        function generateParticleQuestion() {
+            currentQuestion = particleSentences[Math.floor(Math.random() * particleSentences.length)];
+            
+            document.getElementById('question-display').innerHTML = `
+                <div class="question-text">올바른 조사를 선택하세요</div>
+                <div class="main-verb">${currentQuestion.sentence}</div>
+                <div class="verb-reading">(${currentQuestion.romaji})</div>
+                <div class="verb-meaning">${currentQuestion.korean}</div>
+            `;
+            
+            document.getElementById('answer-section').innerHTML = `
+                <div class="answer-options">
+                    <button class="answer-btn" onclick="checkParticleAnswer('を')">を</button>
+                    <button class="answer-btn" onclick="checkParticleAnswer('に')">に</button>
+                </div>
+            `;
+        }
+
+        // 그룹 분류 정답 확인
+        function checkGroupAnswer(selectedGroup) {
+            if (isAnswered) return;
+            isAnswered = true;
+            
+            const buttons = document.querySelectorAll('.answer-btn');
+            buttons.forEach(btn => btn.style.pointerEvents = 'none');
+            
+            const resultMessage = document.getElementById('result-message');
+            
+            if (selectedGroup === currentQuestion.group) {
+                event.currentTarget.classList.add('correct');
+                correctAnswers++;
+                resultMessage.innerHTML = `✅ 정답입니다!<br>
+                    <strong>${currentQuestion.verb}</strong> (${currentQuestion.reading}) [${currentQuestion.romaji || ''}]<br>
+                    <div class="korean-translation">${currentQuestion.meaning}</div>
+                    ${currentQuestion.example ? `<small>💡 예문: ${currentQuestion.example}</small>` : ''}`;
+                resultMessage.classList.add('show', 'correct');
+            } else {
+                event.currentTarget.classList.add('incorrect');
+                buttons[currentQuestion.group - 1].classList.add('correct');
+                wrongAnswers++;
+                resultMessage.innerHTML = `❌ 틀렸습니다.<br>
+                    <strong>${currentQuestion.verb}</strong> (${currentQuestion.reading}) [${currentQuestion.romaji || ''}]<br>
+                    <div class="korean-translation">${currentQuestion.meaning}</div>
+                    정답: ${currentQuestion.group}그룹 동사<br>
+                    ${currentQuestion.tip ? `<small>💡 ${currentQuestion.tip}</small>` : ''}`;
+                resultMessage.classList.add('show', 'incorrect');
+            }
+            
+            totalQuestions++;
+            updateStats();
+            document.getElementById('next-btn').classList.add('show');
+        }
+
+        // 활용 정답 확인
+        function checkConjugationAnswer() {
+            if (isAnswered) return;
+            
+            const userInput = document.getElementById('conjugation-input').value.trim();
+            if (!userInput) return;
+            
+            isAnswered = true;
+            
+            const resultMessage = document.getElementById('result-message');
+            const inputField = document.getElementById('conjugation-input');
+            const submitBtn = document.querySelector('.submit-btn');
+            
+            inputField.style.pointerEvents = 'none';
+            submitBtn.disabled = true;
+            
+            if (userInput === currentQuestion.correctAnswer) {
+                inputField.style.borderColor = '#22c55e';
+                inputField.style.backgroundColor = '#d1fae5';
+                correctAnswers++;
+                resultMessage.innerHTML = `✅ 정답입니다!<br>
+                    <strong>${currentQuestion.verb}</strong> (${currentQuestion.reading}) [${currentQuestion.romaji || ''}]<br>
+                    <div class="korean-translation">${currentQuestion.meaning}</div>
+                    ${currentQuestion.selectedForm}형: <strong>${currentQuestion.correctAnswer}</strong><br>
+                    ${currentQuestion.example ? `<small>💡 예문: ${currentQuestion.example}</small>` : ''}`;
+                resultMessage.classList.add('show', 'correct');
+            } else {
+                inputField.style.borderColor = '#ef4444';
+                inputField.style.backgroundColor = '#fee2e2';
+                wrongAnswers++;
+                resultMessage.innerHTML = `❌ 틀렸습니다.<br>
+                    <strong>${currentQuestion.verb}</strong> (${currentQuestion.reading}) [${currentQuestion.romaji || ''}]<br>
+                    <div class="korean-translation">${currentQuestion.meaning}</div>
+                    정답: <strong>${currentQuestion.correctAnswer}</strong><br>
+                    <small>💡 활용 규칙: ${getConjugationRule(currentQuestion)}</small><br>
+                    ${currentQuestion.tip ? `<small>📝 ${currentQuestion.tip}</small>` : ''}`;
+                resultMessage.classList.add('show', 'incorrect');
+            }
+            
+            totalQuestions++;
+            updateStats();
+            document.getElementById('next-btn').classList.add('show');
+        }
+
+        // 조사 정답 확인
+        function checkParticleAnswer(selectedParticle) {
+            if (isAnswered) return;
+            isAnswered = true;
+            
+            const buttons = document.querySelectorAll('.answer-btn');
+            buttons.forEach(btn => btn.style.pointerEvents = 'none');
+            
+            const resultMessage = document.getElementById('result-message');
+            const completeSentence = currentQuestion.sentence.replace('___', selectedParticle);
+            
+            if (selectedParticle === currentQuestion.answer) {
+                event.currentTarget.classList.add('correct');
+                correctAnswers++;
+                resultMessage.innerHTML = `✅ 정답입니다!<br>
+                    <strong>${completeSentence}</strong> (${currentQuestion.romaji})<br>
+                    <div class="korean-translation">${currentQuestion.korean}</div>
+                    <small>💡 ${currentQuestion.explanation}</small>`;
+                resultMessage.classList.add('show', 'correct');
+            } else {
+                event.currentTarget.classList.add('incorrect');
+                buttons.forEach(btn => {
+                    if (btn.textContent === currentQuestion.answer) {
+                        btn.classList.add('correct');
+                    }
+                });
+                const correctSentence = currentQuestion.sentence.replace('___', currentQuestion.answer);
+                wrongAnswers++;
+                resultMessage.innerHTML = `❌ 틀렸습니다. 정답은 <strong>${currentQuestion.answer}</strong>입니다.<br>
+                    <strong>${correctSentence}</strong> (${currentQuestion.romaji})<br>
+                    <div class="korean-translation">${currentQuestion.korean}</div>
+                    <small>💡 ${currentQuestion.explanation}</small>`;
+                resultMessage.classList.add('show', 'incorrect');
+            }
+            
+            totalQuestions++;
+            updateStats();
+            document.getElementById('next-btn').classList.add('show');
+        }
+
+        // 동사 활용형 생성
+        function getConjugatedForm(verb, form) {
+            if (verb.group === 1) {
+                // 1그룹 동사 활용
+                const stem = verb.verb.slice(0, -1);
+                const ending = verb.verb.slice(-1);
+                let newEnding = '';
+                
+                switch (ending) {
+                    case 'う': newEnding = 'い'; break;
+                    case 'く': newEnding = 'き'; break;
+                    case 'ぐ': newEnding = 'ぎ'; break;
+                    case 'す': newEnding = 'し'; break;
+                    case 'つ': newEnding = 'ち'; break;
+                    case 'ぬ': newEnding = 'に'; break;
+                    case 'ぶ': newEnding = 'び'; break;
+                    case 'む': newEnding = 'み'; break;
+                    case 'る': newEnding = 'り'; break;
+                }
+                
+                const conjugatedStem = stem + newEnding;
+                
+                switch (form) {
+                    case 'ます': return conjugatedStem + 'ます';
+                    case 'ません': return conjugatedStem + 'ません';
+                    case 'ました': return conjugatedStem + 'ました';
+                    case 'ませんでした': return conjugatedStem + 'ませんでした';
+                }
+            } else if (verb.group === 2) {
+                // 2그룹 동사 활용
+                const stem = verb.verb.slice(0, -1);
+                
+                switch (form) {
+                    case 'ます': return stem + 'ます';
+                    case 'ません': return stem + 'ません';
+                    case 'ました': return stem + 'ました';
+                    case 'ませんでした': return stem + 'ませんでした';
+                }
+            } else if (verb.group === 3) {
+                // 3그룹 동사 활용
+                if (verb.verb === 'する') {
+                    switch (form) {
+                        case 'ます': return 'します';
+                        case 'ません': return 'しません';
+                        case 'ました': return 'しました';
+                        case 'ませんでした': return 'しませんでした';
+                    }
+                } else if (verb.verb === '来る') {
+                    switch (form) {
+                        case 'ます': return '来ます';
+                        case 'ません': return '来ません';
+                        case 'ました': return '来ました';
+                        case 'ませんでした': return '来ませんでした';
+                    }
+                } else if (verb.verb.includes('する')) {
+                    const prefix = verb.verb.replace('する', '');
+                    switch (form) {
+                        case 'ます': return prefix + 'します';
+                        case 'ません': return prefix + 'しません';
+                        case 'ました': return prefix + 'しました';
+                        case 'ませんでした': return prefix + 'しませんでした';
+                    }
+                }
+            }
+        }
+
+        // 활용 규칙 설명
+        function getConjugationRule(verb) {
+            if (verb.group === 1) {
+                return `1그룹: う단을 い단으로 바꾸고 ${verb.selectedForm}를 붙입니다`;
+            } else if (verb.group === 2) {
+                return `2그룹: る를 떼고 ${verb.selectedForm}를 붙입니다`;
+            } else {
+                return `3그룹: 불규칙 활용으로 외워야 합니다`;
+            }
+        }
+
+        // 조사 설명
+        function getParticleExplanation(particle, verb) {
+            if (particle === 'を') {
+                return `"${verb}"는 타동사로 직접 목적어에 を를 사용합니다`;
+            } else {
+                return `"${verb}"는 방향이나 목적지를 나타내는 に를 사용합니다`;
+            }
+        }
+
+        // 통계 업데이트
+        function updateStats() {
+            document.getElementById('total-count').textContent = totalQuestions;
+            document.getElementById('correct-count').textContent = correctAnswers;
+            document.getElementById('wrong-count').textContent = wrongAnswers;
+            const accuracy = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+            document.getElementById('accuracy').textContent = accuracy + '%';
+        }
+
+        // 반응형 디자인과 퀴즈 피드백 스타일을 위한 CSS 추가
+        const additionalCSS = `
+            .korean-translation {
+                color: #059669;
+                font-weight: 500;
+                font-size: 1.1em;
+                margin: 8px 0;
+                padding: 6px 12px;
+                background-color: #ecfdf5;
+                border-radius: 6px;
+                border-left: 3px solid #10b981;
+            }
+            
+            .result-message small {
+                color: #6b7280;
+                font-style: italic;
+                display: block;
+                margin-top: 8px;
+                line-height: 1.4;
+            }
+            
+            .result-message strong {
+                color: #1f2937;
+            }
+            
+            @media (max-width: 768px) {
+                .tabs {
+                    flex-direction: column;
+                }
+                
+                .tab-btn {
+                    min-width: auto;
+                    padding: 15px;
+                }
+                
+                .quiz-stats {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                
+                .particle-comparison {
+                    grid-template-columns: 1fr;
+                }
+                
+                .answer-options {
+                    grid-template-columns: 1fr;
+                }
+                
+                .example-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .conjugation-table {
+                    font-size: 0.9em;
+                }
+                
+                .conjugation-table th,
+                .conjugation-table td {
+                    padding: 8px;
+                }
+                
+                .korean-translation {
+                    font-size: 1em;
+                }
+                
+                .conjugation-table td small {
+                    font-size: 0.75em;
+                }
+            }
+            
+            .conjugation-table td small {
+                color: #6b7280;
+                font-weight: normal;
+                display: block;
+                margin-top: 2px;
+                font-size: 0.8em;
+            }
+            
+            /* Ruby 태그 스타일링 (한자 위 히라가나) */
+            ruby {
+                ruby-align: center;
+            }
+            
+            rt {
+                font-size: 0.6em;
+                color: #4b5563;
+                line-height: 1;
+            }
+        `;
+
+        // 추가 CSS 적용
+        const styleTag = document.createElement('style');
+        styleTag.innerHTML = additionalCSS;
+        document.head.appendChild(styleTag);
+
+        // 접근성을 위한 키보드 내비게이션
+        document.addEventListener('keydown', function(e) {
+            if (e.key >= '1' && e.key <= '3' && currentQuizType === 'group' && !isAnswered) {
+                const buttons = document.querySelectorAll('.answer-btn');
+                if (buttons[parseInt(e.key) - 1]) {
+                    buttons[parseInt(e.key) - 1].click();
+                }
+            }
+            
+            if (e.key === 'Enter' && document.getElementById('next-btn').classList.contains('show')) {
+                nextQuestion();
+            }
+        });
+
+        // 홈으로 이동 함수
+        function goHome() {
+            window.location.href = 'index.html';
+        }
+
+        // 초기화
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStats();
+        });
+    </script>
+</body>
+</html>

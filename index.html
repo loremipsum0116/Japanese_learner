@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="일본어 학습을 위한 종합 플랫폼 - 날짜, 숫자, 시간, 동사를 체계적으로 학습하세요">
+    <meta name="keywords" content="일본어, 학습, 교육, 히라가나, 동사활용, 숫자, 날짜, 시간, 온라인학습">
+    <meta name="author" content="Japanese Learning Center">
+    <title>🇯🇵 일본어 종합 학습 센터</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- 헤더 섹션 -->
+        <div class="header">
+            <h1>🇯🇵 일본어 종합 학습 센터</h1>
+            <p>체계적이고 재미있는 일본어 학습의 시작!</p>
+        </div>
+
+        <!-- 환영 메시지 -->
+        <div class="welcome-section">
+            <div class="welcome-card">
+                <h2>🌟 어서오세요!</h2>
+                <p>일본어 학습에 필요한 핵심 요소들을 단계별로 마스터할 수 있습니다.</p>
+                <p>각 섹션별 퀴즈와 참고표로 효과적인 학습을 시작해보세요!</p>
+            </div>
+        </div>
+
+        <!-- 학습 모듈 선택 -->
+        <div class="learning-modules">
+            <h2>📚 학습 모듈</h2>
+            
+            <div class="module-grid">
+                <!-- 기본 표현 모듈 -->
+                <div class="module-card" onclick="goToPage('number.html')" role="button" tabindex="0" aria-label="기본 표현 학습 페이지로 이동">
+                    <div class="module-icon">📊</div>
+                    <h3>수사 표현 마스터</h3>
+                    <div class="module-tags">
+                        <span class="tag">📅 날짜</span>
+                        <span class="tag">🔢 숫자</span>
+                        <span class="tag">⏰ 시간·요일</span>
+                    </div>
+                    <p class="module-description">
+                        일본어의 기본이 되는 날짜, 숫자, 시간 표현을 체계적으로 학습합니다.
+                        특별한 발음 규칙과 불규칙 표현까지 완벽하게 마스터하세요.
+                    </p>
+                    <div class="module-features">
+                        <div class="feature">✨ 3가지 핵심 영역</div>
+                        <div class="feature">🎯 난이도별 학습</div>
+                        <div class="feature">📋 완전한 참고표</div>
+                    </div>
+                    <div class="module-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">학습 시작하기</span>
+                    </div>
+                </div>
+
+                <!-- 동사 활용 모듈 -->
+                <div class="module-card" onclick="goToPage('verb.html')" role="button" tabindex="0" aria-label="동사 활용 학습 페이지로 이동">
+                    <div class="module-icon">⚡</div>
+                    <h3>동사 활용 마스터</h3>
+                    <div class="module-tags">
+                        <span class="tag">📚 그룹 분류</span>
+                        <span class="tag">✏️ 활용형</span>
+                        <span class="tag">🔤 조사</span>
+                    </div>
+                    <p class="module-description">
+                        일본어 동사의 그룹 분류부터 활용, 조사 사용법까지 완전 정복합니다.
+                        1·2·3그룹 동사와 을/에 조사를 체계적으로 학습하세요.
+                    </p>
+                    <div class="module-features">
+                        <div class="feature">🎯 4개 학습 영역</div>
+                        <div class="feature">📖 상세한 활용표</div>
+                        <div class="feature">💡 실전 퀴즈</div>
+                    </div>
+                    <div class="module-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">학습 시작하기</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 학습 통계 대시보드 -->
+        <div class="dashboard">
+            <h2>📈 학습 현황</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-content">
+                        <div class="stat-number" id="totalQuestions">0</div>
+                        <div class="stat-label">총 문제 수</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-content">
+                        <div class="stat-number" id="correctAnswers">0</div>
+                        <div class="stat-label">정답 수</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <div class="stat-number" id="accuracy">0%</div>
+                        <div class="stat-label">정답률</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-content">
+                        <div class="stat-number" id="streak">0</div>
+                        <div class="stat-label">최고 연속</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 학습 팁 섹션 -->
+        <div class="tips-section">
+            <h2>💡 학습 팁</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🎯</div>
+                    <h3>체계적 학습</h3>
+                    <p>기본 표현부터 시작해서 동사 활용까지 단계별로 학습하세요. 각 모듈은 독립적으로도 학습 가능합니다.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">🔄</div>
+                    <h3>반복 학습</h3>
+                    <p>퀴즈를 반복해서 풀어보세요. 특별한 발음과 불규칙 활용을 자연스럽게 기억할 수 있습니다.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">📋</div>
+                    <h3>참고표 활용</h3>
+                    <p>각 모듈의 참고표를 적극 활용하세요. 체계적으로 정리된 표현들을 한눈에 확인할 수 있습니다.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">⚡</div>
+                    <h3>키보드 단축키</h3>
+                    <p>1-4키로 답 선택, Enter로 다음 문제, Ctrl+Space로 재시작 등 단축키로 더 빠른 학습이 가능합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="footer">
+            <div class="footer-content">
+                <p>🇯🇵 일본어 종합 학습 센터</p>
+                <p>체계적이고 효율적인 일본어 학습을 위한 플랫폼</p>
+                <div class="footer-links">
+                    <span>📚 기본 표현</span>
+                    <span>⚡ 동사 활용</span>
+                    <span>🎯 실전 퀴즈</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 페이지 이동 함수
+        function goToPage(url) {
+            window.location.href = url;
+        }
+
+        // 키보드 내비게이션
+        document.addEventListener('keydown', function(e) {
+            const moduleCards = document.querySelectorAll('.module-card');
+            
+            moduleCards.forEach(card => {
+                card.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        card.click();
+                    }
+                });
+            });
+        });
+
+        // 로컬 스토리지에서 학습 통계 로드
+        function loadStats() {
+            // 기본 표현 통계
+            const dateStats = JSON.parse(localStorage.getItem('dateQuizStats') || '{"total": 0, "correct": 0, "streak": 0}');
+            const numberStats = JSON.parse(localStorage.getItem('numberQuizStats') || '{"total": 0, "correct": 0, "streak": 0}');
+            const timeStats = JSON.parse(localStorage.getItem('timeQuizStats') || '{"total": 0, "correct": 0, "streak": 0}');
+            
+            // 동사 활용 통계
+            const verbStats = JSON.parse(localStorage.getItem('verbQuizStats') || '{"total": 0, "correct": 0, "streak": 0}');
+            
+            // 전체 통계 계산
+            const totalQuestions = dateStats.total + numberStats.total + timeStats.total + verbStats.total;
+            const totalCorrect = dateStats.correct + numberStats.correct + timeStats.correct + verbStats.correct;
+            const maxStreak = Math.max(dateStats.streak, numberStats.streak, timeStats.streak, verbStats.streak);
+            const accuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+
+            // UI 업데이트
+            document.getElementById('totalQuestions').textContent = totalQuestions;
+            document.getElementById('correctAnswers').textContent = totalCorrect;
+            document.getElementById('accuracy').textContent = accuracy + '%';
+            document.getElementById('streak').textContent = maxStreak;
+
+            // 진도 표시 업데이트 (예시)
+            updateModuleProgress();
+        }
+
+        // 모듈별 진도 업데이트
+        function updateModuleProgress() {
+            // 간단한 진도 계산 (실제로는 더 복잡한 로직 필요)
+            const basicProgress = Math.min(
+                (JSON.parse(localStorage.getItem('dateQuizStats') || '{"correct": 0}').correct / 20) * 100, 
+                100
+            );
+            const verbProgress = Math.min(
+                (JSON.parse(localStorage.getItem('verbQuizStats') || '{"correct": 0}').correct / 30) * 100,
+                100
+            );
+
+            const progressBars = document.querySelectorAll('.progress-fill');
+            const progressTexts = document.querySelectorAll('.progress-text');
+
+            if (progressBars[0]) {
+                progressBars[0].style.width = basicProgress + '%';
+                progressTexts[0].textContent = basicProgress > 0 ? `${Math.round(basicProgress)}% 완료` : '학습 시작하기';
+            }
+            
+            if (progressBars[1]) {
+                progressBars[1].style.width = verbProgress + '%';
+                progressTexts[1].textContent = verbProgress > 0 ? `${Math.round(verbProgress)}% 완료` : '학습 시작하기';
+            }
+        }
+
+        // 페이지 로드 시 통계 로드
+        document.addEventListener('DOMContentLoaded', function() {
+            loadStats();
+            
+            // 애니메이션 효과
+            const moduleCards = document.querySelectorAll('.module-card');
+            moduleCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+
+        // 페이지 방문 시마다 통계 새로고침
+        window.addEventListener('focus', function() {
+            loadStats();
+        });
+    </script>
+
+    <style>
+        /* 홈페이지 전용 추가 스타일 */
+        .welcome-section {
+            margin-bottom: 40px;
+        }
+
+        .welcome-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+            animation: fadeIn 0.8s ease;
+        }
+
+        .welcome-card h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .welcome-card p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .learning-modules {
+            margin-bottom: 50px;
+        }
+
+        .learning-modules h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .module-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .module-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+
+        .module-icon {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .module-card h3 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .module-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .module-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .module-features {
+            margin-bottom: 20px;
+        }
+
+        .feature {
+            background: #f8f9fa;
+            padding: 8px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            color: #555;
+            border-left: 3px solid #667eea;
+        }
+
+        .module-progress {
+            text-align: center;
+        }
+
+        .progress-bar {
+            background: #e9ecef;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .progress-fill {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100%;
+            transition: width 0.5s ease;
+        }
+
+        .progress-text {
+            font-size: 0.9em;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .dashboard {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        .dashboard h2 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1em;
+        }
+
+        .tips-section {
+            margin-bottom: 40px;
+        }
+
+        .tips-section h2 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-icon {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .tip-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .tip-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer-content p {
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links span {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .module-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .module-card {
+                padding: 20px;
+            }
+            
+            .welcome-card {
+                padding: 30px 20px;
+            }
+            
+            .dashboard {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</body>
+</html>
