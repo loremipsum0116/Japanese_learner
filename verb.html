@@ -725,6 +725,18 @@
             currentQuestion.selectedForm = selectedForm;
             currentQuestion.correctAnswer = getConjugatedForm(currentQuestion, selectedForm);
             
+            // 오답 선택지 생성 (같은 그룹의 다른 동사들의 활용형)
+            const wrongAnswers = generateWrongConjugationAnswers(currentQuestion, selectedForm);
+            const allAnswers = [currentQuestion.correctAnswer, ...wrongAnswers];
+            
+            // 선택지 순서를 무작위로 섞기
+            for (let i = allAnswers.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [allAnswers[i], allAnswers[j]] = [allAnswers[j], allAnswers[i]];
+            }
+            
+            currentQuestion.shuffledAnswers = allAnswers;
+            
             document.getElementById('question-display').innerHTML = `
                 <div class="question-text">${currentQuestion.verb} (${currentQuestion.reading}) 를</div>
                 <div class="question-text"><span class="highlight">${selectedForm}</span> 형으로 활용하세요</div>
@@ -733,16 +745,12 @@
             `;
             
             document.getElementById('answer-section').innerHTML = `
-                <input type="text" class="input-field" id="conjugation-input" placeholder="활용형을 입력하세요" autocomplete="off">
-                <button class="submit-btn" onclick="checkConjugationAnswer()">정답 확인</button>
+                <div class="answer-options">
+                    ${allAnswers.map(answer => 
+                        `<button class="answer-btn" onclick="checkConjugationAnswer('${answer}')">${answer}</button>`
+                    ).join('')}
+                </div>
             `;
-            
-            // Enter 키 이벤트 추가
-            document.getElementById('conjugation-input').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    checkConjugationAnswer();
-                }
-            });
         }
 
         // 조사 문제 생성
@@ -800,24 +808,17 @@
         }
 
         // 활용 정답 확인
-        function checkConjugationAnswer() {
+        function checkConjugationAnswer(selectedAnswer) {
             if (isAnswered) return;
-            
-            const userInput = document.getElementById('conjugation-input').value.trim();
-            if (!userInput) return;
-            
             isAnswered = true;
             
+            const buttons = document.querySelectorAll('.answer-btn');
+            buttons.forEach(btn => btn.style.pointerEvents = 'none');
+            
             const resultMessage = document.getElementById('result-message');
-            const inputField = document.getElementById('conjugation-input');
-            const submitBtn = document.querySelector('.submit-btn');
             
-            inputField.style.pointerEvents = 'none';
-            submitBtn.disabled = true;
-            
-            if (userInput === currentQuestion.correctAnswer) {
-                inputField.style.borderColor = '#22c55e';
-                inputField.style.backgroundColor = '#d1fae5';
+            if (selectedAnswer === currentQuestion.correctAnswer) {
+                event.currentTarget.classList.add('correct');
                 correctAnswers++;
                 resultMessage.innerHTML = `✅ 정답입니다!<br>
                     <strong>${currentQuestion.verb}</strong> (${currentQuestion.reading}) [${currentQuestion.romaji || ''}]<br>
@@ -826,8 +827,12 @@
                     ${currentQuestion.example ? `<small>💡 예문: ${currentQuestion.example}</small>` : ''}`;
                 resultMessage.classList.add('show', 'correct');
             } else {
-                inputField.style.borderColor = '#ef4444';
-                inputField.style.backgroundColor = '#fee2e2';
+                event.currentTarget.classList.add('incorrect');
+                buttons.forEach(btn => {
+                    if (btn.textContent === currentQuestion.correctAnswer) {
+                        btn.classList.add('correct');
+                    }
+                });
                 wrongAnswers++;
                 resultMessage.innerHTML = `❌ 틀렸습니다.<br>
                     <strong>${currentQuestion.verb}</strong> (${currentQuestion.reading}) [${currentQuestion.romaji || ''}]<br>
@@ -881,6 +886,177 @@
             totalQuestions++;
             updateStats();
             document.getElementById('next-btn').classList.add('show');
+        }
+
+        // 오답 선택지 생성 (최대한 헷갈리게)
+        function generateWrongConjugationAnswers(currentVerb, form) {
+            const wrongAnswers = [];
+            const usedAnswers = new Set([currentVerb.correctAnswer]);
+            
+            // 1순위: 일반적인 실수 패턴 (가장 헷갈리는 것들)
+            const confusingAnswers = generateConfusingWrongAnswers(currentVerb, form);
+            for (let answer of confusingAnswers) {
+                if (wrongAnswers.length >= 3) break;
+                if (!usedAnswers.has(answer)) {
+                    wrongAnswers.push(answer);
+                    usedAnswers.add(answer);
+                }
+            }
+            
+            // 2순위: 비슷한 어미 패턴의 동사들
+            const similarEndingVerbs = verbs.filter(v => 
+                v.verb !== currentVerb.verb && 
+                v.verb.slice(-1) === currentVerb.verb.slice(-1)
+            );
+            
+            for (let verb of similarEndingVerbs) {
+                if (wrongAnswers.length >= 3) break;
+                const wrongAnswer = getConjugatedForm(verb, form);
+                if (!usedAnswers.has(wrongAnswer)) {
+                    wrongAnswers.push(wrongAnswer);
+                    usedAnswers.add(wrongAnswer);
+                }
+            }
+            
+            // 3순위: 같은 그룹의 비슷한 길이 동사들
+            const sameGroupSimilarVerbs = verbs.filter(v => 
+                v.group === currentVerb.group && 
+                v.verb !== currentVerb.verb &&
+                Math.abs(v.verb.length - currentVerb.verb.length) <= 1
+            );
+            
+            for (let verb of sameGroupSimilarVerbs) {
+                if (wrongAnswers.length >= 3) break;
+                const wrongAnswer = getConjugatedForm(verb, form);
+                if (!usedAnswers.has(wrongAnswer)) {
+                    wrongAnswers.push(wrongAnswer);
+                    usedAnswers.add(wrongAnswer);
+                }
+            }
+            
+            // 4순위: 다른 시제의 정답 (시제 혼동 유도)
+            if (wrongAnswers.length < 3) {
+                const otherForms = ['ます', 'ません', 'ました', 'ませんでした'].filter(f => f !== form);
+                for (let otherForm of otherForms) {
+                    if (wrongAnswers.length >= 3) break;
+                    const wrongAnswer = getConjugatedForm(currentVerb, otherForm);
+                    if (!usedAnswers.has(wrongAnswer)) {
+                        wrongAnswers.push(wrongAnswer);
+                        usedAnswers.add(wrongAnswer);
+                    }
+                }
+            }
+            
+            // 5순위: 일반적인 다른 그룹 동사들
+            if (wrongAnswers.length < 3) {
+                const differentGroupVerbs = verbs.filter(v => v.group !== currentVerb.group);
+                for (let verb of differentGroupVerbs) {
+                    if (wrongAnswers.length >= 3) break;
+                    const wrongAnswer = getConjugatedForm(verb, form);
+                    if (!usedAnswers.has(wrongAnswer)) {
+                        wrongAnswers.push(wrongAnswer);
+                        usedAnswers.add(wrongAnswer);
+                    }
+                }
+            }
+            
+            return wrongAnswers.slice(0, 3);
+        }
+        
+        // 가장 헷갈리는 오답 패턴 생성
+        function generateConfusingWrongAnswers(verb, form) {
+            const wrongAnswers = [];
+            const baseVerb = verb.verb;
+            
+            // 1그룹 동사를 2그룹처럼 활용하는 실수 (가장 흔한 실수)
+            if (verb.group === 1) {
+                const stem = baseVerb.slice(0, -1);
+                switch (form) {
+                    case 'ます': wrongAnswers.push(stem + 'ます'); break;
+                    case 'ません': wrongAnswers.push(stem + 'ません'); break;
+                    case 'ました': wrongAnswers.push(stem + 'ました'); break;
+                    case 'ませんでした': wrongAnswers.push(stem + 'ませんでした'); break;
+                }
+            }
+            
+            // 2그룹 동사를 1그룹처럼 활용하는 실수
+            if (verb.group === 2) {
+                const stem = baseVerb.slice(0, -1);
+                let wrongStem = '';
+                const lastChar = stem.slice(-1);
+                
+                if (lastChar === 'べ') wrongStem = stem.slice(0, -1) + 'び';
+                else if (lastChar === 'め') wrongStem = stem.slice(0, -1) + 'み';
+                else if (lastChar === 'ね') wrongStem = stem.slice(0, -1) + 'に';
+                else if (lastChar === 'け') wrongStem = stem.slice(0, -1) + 'き';
+                else if (lastChar === 'せ') wrongStem = stem.slice(0, -1) + 'し';
+                else if (lastChar === 'れ') wrongStem = stem.slice(0, -1) + 'り';
+                else if (lastChar === 'て') wrongStem = stem.slice(0, -1) + 'ち';
+                else if (lastChar === 'で') wrongStem = stem.slice(0, -1) + 'ぢ';
+                else if (lastChar === 'げ') wrongStem = stem.slice(0, -1) + 'ぎ';
+                else if (lastChar === 'ぜ') wrongStem = stem.slice(0, -1) + 'じ';
+                
+                if (wrongStem) {
+                    switch (form) {
+                        case 'ます': wrongAnswers.push(wrongStem + 'ます'); break;
+                        case 'ません': wrongAnswers.push(wrongStem + 'ません'); break;
+                        case 'ました': wrongAnswers.push(wrongStem + 'ました'); break;
+                        case 'ませんでした': wrongAnswers.push(wrongStem + 'ませんでした'); break;
+                    }
+                }
+            }
+            
+            // 3그룹 동사의 일반적인 실수들
+            if (verb.group === 3) {
+                if (baseVerb === 'する') {
+                    // する를 1그룹처럼 활용하는 실수
+                    switch (form) {
+                        case 'ます': wrongAnswers.push('すります'); break;
+                        case 'ません': wrongAnswers.push('すりません'); break;
+                        case 'ました': wrongAnswers.push('すりました'); break;
+                        case 'ませんでした': wrongAnswers.push('すりませんでした'); break;
+                    }
+                } else if (baseVerb === '来る') {
+                    // 来る를 1그룹처럼 활용하는 실수
+                    switch (form) {
+                        case 'ます': wrongAnswers.push('来ります'); break; // くります
+                        case 'ません': wrongAnswers.push('来りません'); break;
+                        case 'ました': wrongAnswers.push('来りました'); break;
+                        case 'ませんでした': wrongAnswers.push('来りませんでした'); break;
+                    }
+                    // 来る를 2그룹처럼 활용하는 실수
+                    switch (form) {
+                        case 'ます': wrongAnswers.push('来ます'); break; // 발음 착각 (くます)
+                        case 'ません': wrongAnswers.push('来ません'); break;
+                        case 'ました': wrongAnswers.push('来ました'); break;
+                        case 'ませんでした': wrongAnswers.push('来ませんでした'); break;
+                    }
+                } else if (baseVerb.includes('する')) {
+                    // ~する 동사를 1그룹처럼 활용하는 실수
+                    const prefix = baseVerb.replace('する', '');
+                    switch (form) {
+                        case 'ます': wrongAnswers.push(prefix + 'すります'); break;
+                        case 'ません': wrongAnswers.push(prefix + 'すりません'); break;
+                        case 'ました': wrongAnswers.push(prefix + 'すりました'); break;
+                        case 'ませんでした': wrongAnswers.push(prefix + 'すりませんでした'); break;
+                    }
+                }
+            }
+            
+            // 특별히 헷갈리는 1그룹 예외 동사들의 실수 패턴
+            const ichidanLikeGodanVerbs = ['切る', '帰る', '入る', '走る', '知る', '作る', '売る', '取る', '座る', '乗る'];
+            if (ichidanLikeGodanVerbs.includes(baseVerb) && verb.group === 1) {
+                // る를 그냥 떼고 ます를 붙이는 실수 (2그룹처럼)
+                const wrongStem = baseVerb.slice(0, -1);
+                switch (form) {
+                    case 'ます': wrongAnswers.push(wrongStem + 'ます'); break;
+                    case 'ません': wrongAnswers.push(wrongStem + 'ません'); break;
+                    case 'ました': wrongAnswers.push(wrongStem + 'ました'); break;
+                    case 'ませんでした': wrongAnswers.push(wrongStem + 'ませんでした'); break;
+                }
+            }
+            
+            return wrongAnswers;
         }
 
         // 동사 활용형 생성
@@ -1074,10 +1250,12 @@
 
         // 접근성을 위한 키보드 내비게이션
         document.addEventListener('keydown', function(e) {
-            if (e.key >= '1' && e.key <= '3' && currentQuizType === 'group' && !isAnswered) {
-                const buttons = document.querySelectorAll('.answer-btn');
-                if (buttons[parseInt(e.key) - 1]) {
-                    buttons[parseInt(e.key) - 1].click();
+            const buttons = document.querySelectorAll('.answer-btn');
+            const keyNum = parseInt(e.key);
+            
+            if (keyNum >= 1 && keyNum <= buttons.length && !isAnswered) {
+                if (buttons[keyNum - 1]) {
+                    buttons[keyNum - 1].click();
                 }
             }
             
