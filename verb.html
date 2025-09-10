@@ -666,28 +666,28 @@
             { verb: '来る', reading: 'くる', romaji: 'kuru', meaning: '오다', group: 3, masu: '来ます(きます)', masuRomaji: 'kimasu', particle: 'に', example: '日本に来る (nihon ni kuru) - 일본에 오다', tip: '특별 불규칙! くる→きます (발음 변화 주의)' }
         ];
 
-        // 조사 문제용 예문 (로마자와 상세 설명 포함)
+        // 조사 문제용 예문 (한자에 히라가나 표기 포함)
         const particleSentences = [
-            { sentence: '本___読む', answer: 'を', verb: '読む', romaji: 'hon wo yomu', korean: '책을 읽다', explanation: '읽다는 타동사로 직접 목적어에 を를 사용합니다' },
-            { sentence: '学校___行く', answer: 'に', verb: '行く', romaji: 'gakkou ni iku', korean: '학교에 가다', explanation: '가다는 이동동사로 목적지에 に를 사용합니다' },
-            { sentence: '水___飲む', answer: 'を', verb: '飲む', romaji: 'mizu wo nomu', korean: '물을 마시다', explanation: '마시다는 타동사로 직접 목적어에 を를 사용합니다' },
-            { sentence: '友達___会う', answer: 'に', verb: '会う', romaji: 'tomodachi ni au', korean: '친구를 만나다', explanation: '만나다는 상대에게 하는 동작으로 に를 사용합니다' },
-            { sentence: '音楽___聞く', answer: 'を', verb: '聞く', romaji: 'ongaku wo kiku', korean: '음악을 듣다', explanation: '듣다는 타동사로 직접 목적어에 を를 사용합니다' },
-            { sentence: '電車___乗る', answer: 'に', verb: '乗る', romaji: 'densha ni noru', korean: '전철을 타다', explanation: '타다는 이동 수단에 오르는 동작으로 に를 사용합니다' },
-            { sentence: '手紙___書く', answer: 'を', verb: '書く', romaji: 'tegami wo kaku', korean: '편지를 쓰다', explanation: '쓰다는 타동사로 직접 목적어에 を를 사용합니다' },
-            { sentence: '家___帰る', answer: 'に', verb: '帰る', romaji: 'ie ni kaeru', korean: '집에 돌아가다', explanation: '돌아가다는 이동동사로 목적지에 に를 사용합니다' },
-            { sentence: '映画___見る', answer: 'を', verb: '見る', romaji: 'eiga wo miru', korean: '영화를 보다', explanation: '보다는 타동사로 직접 목적어에 を를 사용합니다' },
-            { sentence: '日本___来る', answer: 'に', verb: '来る', romaji: 'nihon ni kuru', korean: '일본에 오다', explanation: '오다는 이동동사로 목적지에 に를 사용합니다' },
-            { sentence: '宿題___する', answer: 'を', verb: 'する', romaji: 'shukudai wo suru', korean: '숙제를 하다', explanation: '하다는 타동사로 직접 목적어에 を를 사용합니다' },
-            { sentence: '椅子___座る', answer: 'に', verb: '座る', romaji: 'isu ni suwaru', korean: '의자에 앉다', explanation: '앉다는 위치를 나타내는 に를 사용합니다' },
-            { sentence: 'パン___食べる', answer: 'を', verb: '食べる', romaji: 'pan wo taberu', korean: '빵을 먹다', explanation: '먹다는 타동사로 직접 목적어에 を를 사용합니다' },
-            { sentence: '部屋___入る', answer: 'に', verb: '入る', romaji: 'heya ni hairu', korean: '방에 들어가다', explanation: '들어가다는 이동동사로 목적지에 に를 사용합니다' },
-            { sentence: '服___着る', answer: 'を', verb: '着る', romaji: 'fuku wo kiru', korean: '옷을 입다', explanation: '입다는 타동사로 직접 목적어에 을를 사용합니다' },
-            { sentence: '東京___住む', answer: 'に', verb: '住む', romaji: 'toukyou ni sumu', korean: '도쿄에 살다', explanation: '살다는 거주 장소를 나타내는 に를 사용합니다' },
-            { sentence: '友達___電話する', answer: 'に', verb: '電話する', romaji: 'tomodachi ni denwa suru', korean: '친구에게 전화하다', explanation: '전화하다는 상대방에게 하는 동작으로 에를 사용합니다' },
-            { sentence: '先生___質問する', answer: 'に', verb: '質問する', romaji: 'sensei ni shitsumon suru', korean: '선생님께 질문하다', explanation: '질문하다는 상대방에게 하는 동작으로 に를 사용합니다' },
-            { sentence: '日本語___勉強する', answer: 'を', verb: '勉強する', romaji: 'nihongo wo benkyou suru', korean: '일본어를 공부하다', explanation: '공부하다는 타동사로 직접 목적어에 을를 사용합니다' },
-            { sentence: '彼___本をあげる', answer: 'に', verb: 'あげる', romaji: 'kare ni hon wo ageru', korean: '그에게 책을 주다', explanation: '주다는 받는 사람에게 に를 사용합니다' }
+            { sentence: '<ruby>本<rt>ほん</rt></ruby>___<ruby>読<rt>よ</rt></ruby>む', answer: 'を', verb: '読む', korean: '책을 읽다', explanation: '읽다는 타동사로 직접 목적어에 을를 사용합니다' },
+            { sentence: '<ruby>学校<rt>がっこう</rt></ruby>___<ruby>行<rt>い</rt></ruby>く', answer: 'に', verb: '行く', korean: '학교에 가다', explanation: '가다는 이동동사로 목적지에 에를 사용합니다' },
+            { sentence: '<ruby>水<rt>みず</rt></ruby>___<ruby>飲<rt>の</rt></ruby>む', answer: 'を', verb: '飲む', korean: '물을 마시다', explanation: '마시다는 타동사로 직접 목적어에 을를 사용합니다' },
+            { sentence: '<ruby>友達<rt>ともだち</rt></ruby>___<ruby>会<rt>あ</rt></ruby>う', answer: 'に', verb: '会う', korean: '친구를 만나다', explanation: '만나다는 상대에게 하는 동작으로 에를 사용합니다' },
+            { sentence: '<ruby>音楽<rt>おんがく</rt></ruby>___<ruby>聞<rt>き</rt></ruby>く', answer: 'を', verb: '聞く', korean: '음악을 듣다', explanation: '듣다는 타동사로 직접 목적어에 을를 사용합니다' },
+            { sentence: '<ruby>電車<rt>でんしゃ</rt></ruby>___<ruby>乗<rt>の</rt></ruby>る', answer: 'に', verb: '乗る', korean: '전철을 타다', explanation: '타다는 이동 수단에 오르는 동작으로 에를 사용합니다' },
+            { sentence: '<ruby>手紙<rt>てがみ</rt></ruby>___<ruby>書<rt>か</rt></ruby>く', answer: 'を', verb: '書く', korean: '편지를 쓰다', explanation: '쓰다는 타동사로 직접 목적어에 을를 사용합니다' },
+            { sentence: '<ruby>家<rt>いえ</rt></ruby>___<ruby>帰<rt>かえ</rt></ruby>る', answer: 'に', verb: '帰る', korean: '집에 돌아가다', explanation: '돌아가다는 이동동사로 목적지에 에를 사용합니다' },
+            { sentence: '<ruby>映画<rt>えいが</rt></ruby>___<ruby>見<rt>み</rt></ruby>る', answer: 'を', verb: '見る', korean: '영화를 보다', explanation: '보다는 타동사로 직접 목적어에 을를 사용합니다' },
+            { sentence: '<ruby>日本<rt>にほん</rt></ruby>___<ruby>来<rt>く</rt></ruby>る', answer: 'に', verb: '来る', korean: '일본에 오다', explanation: '오다는 이동동사로 목적지에 에를 사용합니다' },
+            { sentence: '<ruby>宿題<rt>しゅくだい</rt></ruby>___する', answer: 'を', verb: 'する', korean: '숙제를 하다', explanation: '하다는 타동사로 직접 목적어에 을를 사용합니다' },
+            { sentence: '<ruby>椅子<rt>いす</rt></ruby>___<ruby>座<rt>すわ</rt></ruby>る', answer: 'に', verb: '座る', korean: '의자에 앉다', explanation: '앉다는 위치를 나타내는 에를 사용합니다' },
+            { sentence: 'パン___<ruby>食<rt>た</rt></ruby>べる', answer: 'を', verb: '食べる', korean: '빵을 먹다', explanation: '먹다는 타동사로 직접 목적어에 을를 사용합니다' },
+            { sentence: '<ruby>部屋<rt>へや</rt></ruby>___<ruby>入<rt>はい</rt></ruby>る', answer: 'に', verb: '入る', korean: '방에 들어가다', explanation: '들어가다는 이동동사로 목적지에 에를 사용합니다' },
+            { sentence: '<ruby>服<rt>ふく</rt></ruby>___<ruby>着<rt>き</rt></ruby>る', answer: 'を', verb: '着る', korean: '옷을 입다', explanation: '입다는 타동사로 직접 목적어에 을를 사용합니다' },
+            { sentence: '<ruby>東京<rt>とうきょう</rt></ruby>___<ruby>住<rt>す</rt></ruby>む', answer: 'に', verb: '住む', korean: '도쿄에 살다', explanation: '살다는 거주 장소를 나타내는 에를 사용합니다' },
+            { sentence: '<ruby>友達<rt>ともだち</rt></ruby>___<ruby>電話<rt>でんわ</rt></ruby>する', answer: 'に', verb: '電話する', korean: '친구에게 전화하다', explanation: '전화하다는 상대방에게 하는 동작으로 에를 사용합니다' },
+            { sentence: '<ruby>先生<rt>せんせい</rt></ruby>___<ruby>質問<rt>しつもん</rt></ruby>する', answer: 'に', verb: '質問する', korean: '선생님께 질문하다', explanation: '질문하다는 상대방에게 하는 동작으로 에를 사용합니다' },
+            { sentence: '<ruby>日本語<rt>にほんご</rt></ruby>___<ruby>勉強<rt>べんきょう</rt></ruby>する', answer: 'を', verb: '勉強する', korean: '일본어를 공부하다', explanation: '공부하다는 타동사로 직접 목적어에 을를 사용합니다' },
+            { sentence: '<ruby>彼<rt>かれ</rt></ruby>___<ruby>本<rt>ほん</rt></ruby>をあげる', answer: 'に', verb: 'あげる', korean: '그에게 책을 주다', explanation: '주다는 받는 사람에게 에를 사용합니다' }
         ];
 
         // 퀴즈 상태 변수
@@ -812,7 +812,6 @@
             document.getElementById('question-display').innerHTML = `
                 <div class="question-text">올바른 조사를 선택하세요</div>
                 <div class="main-verb">${currentQuestion.sentence}</div>
-                <div class="verb-reading">(${currentQuestion.romaji})</div>
                 <div class="verb-meaning">${currentQuestion.korean}</div>
             `;
             
