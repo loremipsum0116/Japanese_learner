@@ -744,10 +744,76 @@ body {
     color: #ff6b00;
     font-weight: bold;
     font-size: 1.1em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.exception-content {
+    margin-top: 10px;
+}
+
+.exception-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.exception-verb {
+    background: white;
+    border: 1px solid #ffcc80;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.exception-verb:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
+}
+
+.verb-kanji {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #d84315;
+}
+
+.verb-reading {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 5px;
+}
+
+.verb-meaning {
+    font-size: 0.85em;
+    color: #424242;
+    margin-top: 5px;
+}
+
+.exception-rule {
+    background: #f3e5f5;
+    border-left: 4px solid #9c27b0;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+.exception-rule ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.exception-rule li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.warning {
+    color: #d32f2f;
+    font-weight: bold;
 }
 
 /* 활용 테이블 */
