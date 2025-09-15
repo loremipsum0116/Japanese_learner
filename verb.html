@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="일본어 동사 그룹 분류, 활용형, 조사 사용법을 학습할 수 있는 종합 퀴즈 플랫폼">
-    <meta name="keywords" content="일본어, 동사, 활용, 그룹, 조사, を, に, ます형, て형, た형, ない형, 가능형">
+    <meta name="description" content="일본어 동사 그룹 분류, 활용형을 학습할 수 있는 종합 퀴즈 플랫폼">
+    <meta name="keywords" content="일본어, 동사, 활용, 그룹, ます형, て형, た형, ない형, 가능형">
     <meta name="author" content="Japanese Verb Master">
-    <title>🎌 일본어 동사 종합 마스터 - 그룹 분류·활용·조사 완전정복</title>
+    <title>🎌 일본어 동사 종합 마스터 - 그룹 분류·활용 완전정복</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
                 <button onclick="goHome()" class="home-btn" aria-label="홈으로 돌아가기">🏠 홈</button>
             </div>
             <h1>🎌 일본어 동사 종합 마스터</h1>
-            <p>그룹 분류 · 모든 활용형 · 조사 사용법 완전 정복</p>
+            <p>그룹 분류 · 모든 활용형 완전 정복</p>
         </div>
 
         <div class="tab-container">
@@ -26,7 +26,6 @@
                 <button class="tab-btn" onclick="switchTab('te')" aria-label="て형·た형 활용 학습" tabindex="0">🔄 て형·た형</button>
                 <button class="tab-btn" onclick="switchTab('nai')" aria-label="ない형 활용 학습" tabindex="0">❌ ない형</button>
                 <button class="tab-btn" onclick="switchTab('kanou')" aria-label="가능형 활용 학습" tabindex="0">💪 가능형</button>
-                <button class="tab-btn" onclick="switchTab('particle')" aria-label="조사 を과 に 사용법 학습" tabindex="0">📤 조사 (を/に)</button>
                 <button class="tab-btn" onclick="switchTab('quiz')" aria-label="종합 퀴즈" tabindex="0">🎯 종합 퀴즈</button>
             </div>
 
@@ -548,82 +547,6 @@
                     </div>
                 </div>
 
-                <!-- 조사 사용법 탭 -->
-                <div id="particle-tab" class="tab-panel">
-                    <div class="study-section">
-                        <div class="group-card particle-card">
-                            <h2 class="group-title">
-                                동사와 조사: を vs に
-                                <span class="group-badge">올바른 조사 선택하기</span>
-                            </h2>
-
-                            <div class="particle-comparison">
-                                <div class="particle-box wo">
-                                    <div class="particle-title">を (직접 목적격)</div>
-                                    <div class="rule-content">
-                                        <p><strong>✅ 사용 원칙:</strong></p>
-                                        <p>• 직접적인 동작의 대상</p>
-                                        <p>• 타동사와 함께 사용</p>
-                                        <p>• "~을/를" 의미</p>
-                                        <br>
-                                        <p><strong>📝 주요 동사:</strong></p>
-                                        <p>• 食べる (먹다) - パンを食べる</p>
-                                        <p>• 飲む (마시다) - 水を飲む</p>
-                                        <p>• 読む (읽다) - 本を読む</p>
-                                        <p>• 書く (쓰다) - 手紙を書く</p>
-                                        <p>• 見る (보다) - 映画を見る</p>
-                                        <p>• 聞く (듣다) - 音楽を聞く</p>
-                                        <p>• 買う (사다) - 服を買う</p>
-                                        <p>• 作る (만들다) - 料理を作る</p>
-                                        <p>• 勉強する (공부하다) - 日本語を勉強する</p>
-                                    </div>
-                                </div>
-
-                                <div class="particle-box ni">
-                                    <div class="particle-title">に (간접 목적격/방향)</div>
-                                    <div class="rule-content">
-                                        <p><strong>✅ 사용 원칙:</strong></p>
-                                        <p>• 목적지, 도착점</p>
-                                        <p>• 시간, 존재 위치</p>
-                                        <p>• "~에/에게" 의미</p>
-                                        <br>
-                                        <p><strong>📝 주요 동사:</strong></p>
-                                        <p>• 行く (가다) - 学校に行く</p>
-                                        <p>• 来る (오다) - 日本に来る</p>
-                                        <p>• 帰る (돌아가다) - 家に帰る</p>
-                                        <p>• 入る (들어가다) - 部屋に入る</p>
-                                        <p>• 乗る (타다) - バスに乗る</p>
-                                        <p>• 会う (만나다) - 友達に会う</p>
-                                        <p>• あげる (주다) - 彼に本をあげる</p>
-                                        <p>• なる (되다) - 医者になる</p>
-                                        <p>• 住む (살다) - 東京に住む</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="rule-box">
-                                <div class="rule-title">
-                                    <span class="icon">🎯</span> 특별 주의 동사들
-                                </div>
-                                <div class="rule-content">
-                                    <p><strong>1. 両方使える動詞 (둘 다 사용 가능하지만 의미가 다름)</strong></p>
-                                    <p>• 登る</p>
-                                    <p>　- 山を登る (산을 오르다 - 경로)</p>
-                                    <p>　- 山に登る (산에 오르다 - 목적지)</p>
-                                    <br>
-                                    <p>• 出る</p>
-                                    <p>　- 部屋を出る (방을 나가다 - 떠나는 장소)</p>
-                                    <p>　- 外に出る (밖에 나가다 - 도착점)</p>
-                                    <br>
-                                    <p><strong>2. 헷갈리기 쉬운 동사</strong></p>
-                                    <p>• 電話する → 友達<span class="highlight">に</span>電話する (친구에게 전화하다)</p>
-                                    <p>• 質問する → 先生<span class="highlight">に</span>質問する (선생님께 질문하다)</p>
-                                    <p>• 似る → 母<span class="highlight">に</span>似る (어머니를 닮다)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- 종합 퀴즈 탭 -->
                 <div id="quiz-tab" class="tab-panel">
@@ -647,10 +570,6 @@
                         <div class="quiz-type-card" onclick="selectQuizType('kanou')">
                             <div class="quiz-type-title">💪 가능형</div>
                             <div class="quiz-type-desc">가능형으로 올바르게 활용하기</div>
-                        </div>
-                        <div class="quiz-type-card" onclick="selectQuizType('particle')">
-                            <div class="quiz-type-title">📤 조사 선택</div>
-                            <div class="quiz-type-desc">を와 に 중 올바른 조사 선택하기</div>
                         </div>
                     </div>
 
@@ -697,190 +616,163 @@
             // 1그룹 동사 (5단 동사)
             { verb: '書く', reading: 'かく', romaji: 'kaku', meaning: '쓰다', group: 1, 
               masu: '書きます', te: '書いて', ta: '書いた', nai: '書かない', kanou: '書ける',
-              particle: 'を', example: '手紙を書く' },
+              example: '手紙を書く' },
             { verb: '読む', reading: 'よむ', romaji: 'yomu', meaning: '읽다', group: 1,
               masu: '読みます', te: '読んで', ta: '読んだ', nai: '読まない', kanou: '読める',
-              particle: 'を', example: '本を読む' },
+              example: '本を読む' },
             { verb: '飲む', reading: 'のむ', romaji: 'nomu', meaning: '마시다', group: 1,
               masu: '飲みます', te: '飲んで', ta: '飲んだ', nai: '飲まない', kanou: '飲める',
-              particle: 'を', example: '水を飲む' },
+              example: '水を飲む' },
             { verb: '話す', reading: 'はなす', romaji: 'hanasu', meaning: '말하다', group: 1,
               masu: '話します', te: '話して', ta: '話した', nai: '話さない', kanou: '話せる',
-              particle: 'を', example: '日本語を話す' },
+              example: '日本語を話す' },
             { verb: '聞く', reading: 'きく', romaji: 'kiku', meaning: '듣다', group: 1,
               masu: '聞きます', te: '聞いて', ta: '聞いた', nai: '聞かない', kanou: '聞ける',
-              particle: 'を', example: '音楽を聞く' },
+              example: '音楽を聞く' },
             { verb: '行く', reading: 'いく', romaji: 'iku', meaning: '가다', group: 1,
               masu: '行きます', te: '行って', ta: '行った', nai: '行かない', kanou: '行ける',
-              particle: 'に', example: '学校に行く', specialNote: 'て형 예외!' },
+              example: '学校に行く', specialNote: 'て형 예외!' },
             { verb: '帰る', reading: 'かえる', romaji: 'kaeru', meaning: '돌아오다', group: 1,
               masu: '帰ります', te: '帰って', ta: '帰った', nai: '帰らない', kanou: '帰れる',
-              particle: 'に', example: '家に帰る' },
+              example: '家に帰る' },
             { verb: '買う', reading: 'かう', romaji: 'kau', meaning: '사다', group: 1,
               masu: '買います', te: '買って', ta: '買った', nai: '買わない', kanou: '買える',
-              particle: 'を', example: '服を買う', specialNote: 'ない형 주의!' },
+example: '服を買う', specialNote: 'ない형 주의!' },
             { verb: '会う', reading: 'あう', romaji: 'au', meaning: '만나다', group: 1,
               masu: '会います', te: '会って', ta: '会った', nai: '会わない', kanou: '会える',
-              particle: 'に', example: '友達に会う' },
+example: '友達に会う' },
             { verb: '立つ', reading: 'たつ', romaji: 'tatsu', meaning: '서다', group: 1,
               masu: '立ちます', te: '立って', ta: '立った', nai: '立たない', kanou: '立てる',
-              particle: null, example: '立つ' },
+example: '立つ' },
             { verb: '座る', reading: 'すわる', romaji: 'suwaru', meaning: '앉다', group: 1,
               masu: '座ります', te: '座って', ta: '座った', nai: '座らない', kanou: '座れる',
-              particle: 'に', example: '椅子に座る' },
+example: '椅子に座る' },
             { verb: '待つ', reading: 'まつ', romaji: 'matsu', meaning: '기다리다', group: 1,
               masu: '待ちます', te: '待って', ta: '待った', nai: '待たない', kanou: '待てる',
-              particle: 'を', example: '友達を待つ' },
+example: '友達を待つ' },
             { verb: '泳ぐ', reading: 'およぐ', romaji: 'oyogu', meaning: '수영하다', group: 1,
               masu: '泳ぎます', te: '泳いで', ta: '泳いだ', nai: '泳がない', kanou: '泳げる',
-              particle: null, example: '海で泳ぐ' },
+example: '海で泳ぐ' },
             { verb: '遊ぶ', reading: 'あそぶ', romaji: 'asobu', meaning: '놀다', group: 1,
               masu: '遊びます', te: '遊んで', ta: '遊んだ', nai: '遊ばない', kanou: '遊べる',
-              particle: null, example: '公園で遊ぶ' },
+example: '公園で遊ぶ' },
             { verb: '死ぬ', reading: 'しぬ', romaji: 'shinu', meaning: '죽다', group: 1,
               masu: '死にます', te: '死んで', ta: '死んだ', nai: '死なない', kanou: '死ねる',
-              particle: null, example: '死ぬ', specialNote: '유일한 ぬ동사' },
+example: '死ぬ', specialNote: '유일한 ぬ동사' },
             { verb: '作る', reading: 'つくる', romaji: 'tsukuru', meaning: '만들다', group: 1,
               masu: '作ります', te: '作って', ta: '作った', nai: '作らない', kanou: '作れる',
-              particle: 'を', example: '料理を作る' },
+example: '料理を作る' },
             { verb: '売る', reading: 'うる', romaji: 'uru', meaning: '팔다', group: 1,
               masu: '売ります', te: '売って', ta: '売った', nai: '売らない', kanou: '売れる',
-              particle: 'を', example: '本を売る' },
+example: '本を売る' },
             { verb: '取る', reading: 'とる', romaji: 'toru', meaning: '가지다/찍다', group: 1,
               masu: '取ります', te: '取って', ta: '取った', nai: '取らない', kanou: '取れる',
-              particle: 'を', example: '写真を取る' },
+example: '写真を取る' },
             { verb: '歩く', reading: 'あるく', romaji: 'aruku', meaning: '걷다', group: 1,
               masu: '歩きます', te: '歩いて', ta: '歩いた', nai: '歩かない', kanou: '歩ける',
-              particle: 'を', example: '道を歩く' },
+example: '道を歩く' },
             { verb: '働く', reading: 'はたらく', romaji: 'hataraku', meaning: '일하다', group: 1,
               masu: '働きます', te: '働いて', ta: '働いた', nai: '働かない', kanou: '働ける',
-              particle: null, example: '会社で働く' },
+example: '会社で働く' },
             { verb: '休む', reading: 'やすむ', romaji: 'yasumu', meaning: '쉬다', group: 1,
               masu: '休みます', te: '休んで', ta: '休んだ', nai: '休まない', kanou: '休める',
-              particle: 'を', example: '学校を休む' },
+example: '学校を休む' },
             { verb: '思う', reading: 'おもう', romaji: 'omou', meaning: '생각하다', group: 1,
               masu: '思います', te: '思って', ta: '思った', nai: '思わない', kanou: '思える',
-              particle: 'を', example: 'あなたを思う' },
+example: 'あなたを思う' },
             { verb: '言う', reading: 'いう', romaji: 'iu', meaning: '말하다', group: 1,
               masu: '言います', te: '言って', ta: '言った', nai: '言わない', kanou: '言える',
-              particle: 'を', example: '本当のことを言う' },
+example: '本当のことを言う' },
             { verb: '持つ', reading: 'もつ', romaji: 'motsu', meaning: '가지다', group: 1,
               masu: '持ちます', te: '持って', ta: '持った', nai: '持たない', kanou: '持てる',
-              particle: 'を', example: 'カバンを持つ' },
+example: 'カバンを持つ' },
             { verb: '住む', reading: 'すむ', romaji: 'sumu', meaning: '살다', group: 1,
               masu: '住みます', te: '住んで', ta: '住んだ', nai: '住まない', kanou: '住める',
-              particle: 'に', example: '東京に住む' },
+example: '東京に住む' },
             { verb: '知る', reading: 'しる', romaji: 'shiru', meaning: '알다', group: 1,
               masu: '知ります', te: '知って', ta: '知った', nai: '知らない', kanou: '知れる',
-              particle: 'を', example: '日本語を知る' },
+example: '日本語を知る' },
             { verb: '入る', reading: 'はいる', romaji: 'hairu', meaning: '들어가다', group: 1,
               masu: '入ります', te: '入って', ta: '入った', nai: '入らない', kanou: '入れる',
-              particle: 'に', example: '部屋に入る' },
+example: '部屋に入る' },
             { verb: '切る', reading: 'きる', romaji: 'kiru', meaning: '자르다', group: 1,
               masu: '切ります', te: '切って', ta: '切った', nai: '切らない', kanou: '切れる',
-              particle: 'を', example: '紙を切る' },
+example: '紙を切る' },
             { verb: '走る', reading: 'はしる', romaji: 'hashiru', meaning: '달리다', group: 1,
               masu: '走ります', te: '走って', ta: '走った', nai: '走らない', kanou: '走れる',
-              particle: null, example: '公園で走る' },
+example: '公園で走る' },
             { verb: '乗る', reading: 'のる', romaji: 'noru', meaning: '타다', group: 1,
               masu: '乗ります', te: '乗って', ta: '乗った', nai: '乗らない', kanou: '乗れる',
-              particle: 'に', example: '電車に乗る' },
+example: '電車に乗る' },
               
             // 2그룹 동사 (1단 동사)
             { verb: '食べる', reading: 'たべる', romaji: 'taberu', meaning: '먹다', group: 2,
               masu: '食べます', te: '食べて', ta: '食べた', nai: '食べない', kanou: '食べられる',
-              particle: 'を', example: 'パンを食べる' },
+example: 'パンを食べる' },
             { verb: '見る', reading: 'みる', romaji: 'miru', meaning: '보다', group: 2,
               masu: '見ます', te: '見て', ta: '見た', nai: '見ない', kanou: '見られる',
-              particle: 'を', example: '映画を見る' },
+example: '映画を見る' },
             { verb: '起きる', reading: 'おきる', romaji: 'okiru', meaning: '일어나다', group: 2,
               masu: '起きます', te: '起きて', ta: '起きた', nai: '起きない', kanou: '起きられる',
-              particle: null, example: '朝起きる' },
+example: '朝起きる' },
             { verb: '寝る', reading: 'ねる', romaji: 'neru', meaning: '자다', group: 2,
               masu: '寝ます', te: '寝て', ta: '寝た', nai: '寝ない', kanou: '寝られる',
-              particle: null, example: '夜寝る' },
+example: '夜寝る' },
             { verb: '教える', reading: 'おしえる', romaji: 'oshieru', meaning: '가르치다', group: 2,
               masu: '教えます', te: '教えて', ta: '教えた', nai: '教えない', kanou: '教えられる',
-              particle: 'を', example: '日本語を教える' },
+example: '日本語を教える' },
             { verb: '着る', reading: 'きる', romaji: 'kiru', meaning: '입다', group: 2,
               masu: '着ます', te: '着て', ta: '着た', nai: '着ない', kanou: '着られる',
-              particle: 'を', example: '服を着る' },
+example: '服を着る' },
             { verb: '出る', reading: 'でる', romaji: 'deru', meaning: '나가다', group: 2,
               masu: '出ます', te: '出て', ta: '出た', nai: '出ない', kanou: '出られる',
-              particle: 'を', example: '部屋を出る' },
+example: '部屋を出る' },
             { verb: '答える', reading: 'こたえる', romaji: 'kotaeru', meaning: '대답하다', group: 2,
               masu: '答えます', te: '答えて', ta: '答えた', nai: '答えない', kanou: '答えられる',
-              particle: 'に', example: '質問に答える' },
+example: '質問に答える' },
             { verb: '覚える', reading: 'おぼえる', romaji: 'oboeru', meaning: '외우다', group: 2,
               masu: '覚えます', te: '覚えて', ta: '覚えた', nai: '覚えない', kanou: '覚えられる',
-              particle: 'を', example: '単語を覚える' },
+example: '単語を覚える' },
             { verb: '忘れる', reading: 'わすれる', romaji: 'wasureru', meaning: '잊다', group: 2,
               masu: '忘れます', te: '忘れて', ta: '忘れた', nai: '忘れない', kanou: '忘れられる',
-              particle: 'を', example: '名前を忘れる' },
+example: '名前を忘れる' },
             { verb: '開ける', reading: 'あける', romaji: 'akeru', meaning: '열다', group: 2,
               masu: '開けます', te: '開けて', ta: '開けた', nai: '開けない', kanou: '開けられる',
-              particle: 'を', example: 'ドアを開ける' },
+example: 'ドアを開ける' },
             { verb: '閉める', reading: 'しめる', romaji: 'shimeru', meaning: '닫다', group: 2,
               masu: '閉めます', te: '閉めて', ta: '閉めた', nai: '閉めない', kanou: '閉められる',
-              particle: 'を', example: '窓を閉める' },
+example: '窓を閉める' },
             { verb: '始める', reading: 'はじめる', romaji: 'hajimeru', meaning: '시작하다', group: 2,
               masu: '始めます', te: '始めて', ta: '始めた', nai: '始めない', kanou: '始められる',
-              particle: 'を', example: '勉強を始める' },
+example: '勉強を始める' },
             { verb: 'あげる', reading: 'あげる', romaji: 'ageru', meaning: '주다', group: 2,
               masu: 'あげます', te: 'あげて', ta: 'あげた', nai: 'あげない', kanou: 'あげられる',
-              particle: 'に', example: '友達に本をあげる' },
+example: '友達に本をあげる' },
               
             // 3그룹 동사 (불규칙 동사)
             { verb: 'する', reading: 'する', romaji: 'suru', meaning: '하다', group: 3,
               masu: 'します', te: 'して', ta: 'した', nai: 'しない', kanou: 'できる',
-              particle: 'を', example: '宿題をする', specialNote: '가능형이 できる' },
+example: '宿題をする', specialNote: '가능형이 できる' },
             { verb: '勉強する', reading: 'べんきょうする', romaji: 'benkyou suru', meaning: '공부하다', group: 3,
               masu: '勉強します', te: '勉強して', ta: '勉強した', nai: '勉強しない', kanou: '勉強できる',
-              particle: 'を', example: '日本語を勉強する' },
+example: '日本語を勉強する' },
             { verb: '運動する', reading: 'うんどうする', romaji: 'undou suru', meaning: '운동하다', group: 3,
               masu: '運動します', te: '運動して', ta: '運動した', nai: '運動しない', kanou: '運動できる',
-              particle: null, example: '毎日運動する' },
+example: '毎日運動する' },
             { verb: '料理する', reading: 'りょうりする', romaji: 'ryouri suru', meaning: '요리하다', group: 3,
               masu: '料理します', te: '料理して', ta: '料理した', nai: '料理しない', kanou: '料理できる',
-              particle: 'を', example: '夕食を料理する' },
+example: '夕食を料理する' },
             { verb: '電話する', reading: 'でんわする', romaji: 'denwa suru', meaning: '전화하다', group: 3,
               masu: '電話します', te: '電話して', ta: '電話した', nai: '電話しない', kanou: '電話できる',
-              particle: 'に', example: '友達に電話する' },
+example: '友達に電話する' },
             { verb: '質問する', reading: 'しつもんする', romaji: 'shitsumon suru', meaning: '질문하다', group: 3,
               masu: '質問します', te: '質問して', ta: '質問した', nai: '質問しない', kanou: '質問できる',
-              particle: 'に', example: '先生に質問する' },
+example: '先生に質問する' },
             { verb: '来る', reading: 'くる', romaji: 'kuru', meaning: '오다', group: 3,
               masu: '来ます(きます)', te: '来て(きて)', ta: '来た(きた)', nai: '来ない(こない)', kanou: '来られる(こられる)',
-              particle: 'に', example: '日本に来る', specialNote: '발음 변화 주의!' }
+example: '日本に来る', specialNote: '발음 변화 주의!' }
         ];
 
-        // 조사 문제용 예문 (확장)
-        const particleSentences = [
-            { sentence: '<ruby>本<rt>ほん</rt></ruby>___<ruby>読<rt>よ</rt></ruby>む', answer: 'を', verb: '読む', reading: 'よむ', korean: '책을 읽다' },
-            { sentence: '<ruby>学校<rt>がっこう</rt></ruby>___<ruby>行<rt>い</rt></ruby>く', answer: 'に', verb: '行く', reading: 'いく', korean: '학교에 가다' },
-            { sentence: '<ruby>水<rt>みず</rt></ruby>___<ruby>飲<rt>の</rt></ruby>む', answer: 'を', verb: '飲む', reading: 'のむ', korean: '물을 마시다' },
-            { sentence: '<ruby>友達<rt>ともだち</rt></ruby>___<ruby>会<rt>あ</rt></ruby>う', answer: 'に', verb: '会う', reading: 'あう', korean: '친구를 만나다' },
-            { sentence: '<ruby>音楽<rt>おんがく</rt></ruby>___<ruby>聞<rt>き</rt></ruby>く', answer: 'を', verb: '聞く', reading: 'きく', korean: '음악을 듣다' },
-            { sentence: '<ruby>電車<rt>でんしゃ</rt></ruby>___<ruby>乗<rt>の</rt></ruby>る', answer: 'に', verb: '乗る', reading: 'のる', korean: '전철을 타다' },
-            { sentence: '<ruby>手紙<rt>てがみ</rt></ruby>___<ruby>書<rt>か</rt></ruby>く', answer: 'を', verb: '書く', reading: 'かく', korean: '편지를 쓰다' },
-            { sentence: '<ruby>家<rt>いえ</rt></ruby>___<ruby>帰<rt>かえ</rt></ruby>る', answer: 'に', verb: '帰る', reading: 'かえる', korean: '집에 돌아가다' },
-            { sentence: '<ruby>映画<rt>えいが</rt></ruby>___<ruby>見<rt>み</rt></ruby>る', answer: 'を', verb: '見る', reading: 'みる', korean: '영화를 보다' },
-            { sentence: '<ruby>日本<rt>にほん</rt></ruby>___<ruby>来<rt>く</rt></ruby>る', answer: 'に', verb: '来る', reading: 'くる', korean: '일본에 오다' },
-            { sentence: '<ruby>宿題<rt>しゅくだい</rt></ruby>___する', answer: 'を', verb: 'する', reading: 'する', korean: '숙제를 하다' },
-            { sentence: '<ruby>椅子<rt>いす</rt></ruby>___<ruby>座<rt>すわ</rt></ruby>る', answer: 'に', verb: '座る', reading: 'すわる', korean: '의자에 앉다' },
-            { sentence: 'パン___<ruby>食<rt>た</rt></ruby>べる', answer: 'を', verb: '食べる', reading: 'たべる', korean: '빵을 먹다' },
-            { sentence: '<ruby>部屋<rt>へや</rt></ruby>___<ruby>入<rt>はい</rt></ruby>る', answer: 'に', verb: '入る', reading: 'はいる', korean: '방에 들어가다' },
-            { sentence: '<ruby>服<rt>ふく</rt></ruby>___<ruby>着<rt>き</rt></ruby>る', answer: 'を', verb: '着る', reading: 'きる', korean: '옷을 입다' },
-            { sentence: '<ruby>東京<rt>とうきょう</rt></ruby>___<ruby>住<rt>す</rt></ruby>む', answer: 'に', verb: '住む', reading: 'すむ', korean: '도쿄에 살다' },
-            { sentence: '<ruby>友達<rt>ともだち</rt></ruby>___<ruby>電話<rt>でんわ</rt></ruby>する', answer: 'に', verb: '電話する', reading: 'でんわする', korean: '친구에게 전화하다' },
-            { sentence: '<ruby>先生<rt>せんせい</rt></ruby>___<ruby>質問<rt>しつもん</rt></ruby>する', answer: 'に', verb: '質問する', reading: 'しつもんする', korean: '선생님께 질문하다' },
-            { sentence: '<ruby>日本語<rt>にほんご</rt></ruby>___<ruby>勉強<rt>べんきょう</rt></ruby>する', answer: 'を', verb: '勉強する', reading: 'べんきょうする', korean: '일본어를 공부하다' },
-            { sentence: '<ruby>彼<rt>かれ</rt></ruby>___<ruby>本<rt>ほん</rt></ruby>をあげる', answer: 'に', verb: 'あげる', reading: 'あげる', korean: '그에게 책을 주다' },
-            { sentence: 'ドア___<ruby>開<rt>あ</rt></ruby>ける', answer: 'を', verb: '開ける', reading: 'あける', korean: '문을 열다' },
-            { sentence: '<ruby>質問<rt>しつもん</rt></ruby>___<ruby>答<rt>こた</rt></ruby>える', answer: 'に', verb: '答える', reading: 'こたえる', korean: '질문에 대답하다' },
-            { sentence: '<ruby>道<rt>みち</rt></ruby>___<ruby>歩<rt>ある</rt></ruby>く', answer: 'を', verb: '歩く', reading: 'あるく', korean: '길을 걷다' },
-            { sentence: '<ruby>学校<rt>がっこう</rt></ruby>___<ruby>休<rt>やす</rt></ruby>む', answer: 'を', verb: '休む', reading: 'やすむ', korean: '학교를 쉬다' }
-        ];
 
         // 퀴즈 상태 변수
         let currentQuizType = 'group';
@@ -905,8 +797,7 @@
                 'te': 2,
                 'nai': 3,
                 'kanou': 4,
-                'particle': 5,
-                'quiz': 6
+                'quiz': 5
             };
             
             document.querySelectorAll('.tab-btn')[tabIndex[tabName]].classList.add('active');
@@ -948,9 +839,6 @@
                     break;
                 case 'kanou':
                     generateKanouQuestion();
-                    break;
-                case 'particle':
-                    generateParticleQuestion();
                     break;
             }
         }
@@ -1082,24 +970,6 @@
             `;
         }
 
-        // 조사 문제 생성
-        function generateParticleQuestion() {
-            currentQuestion = particleSentences[Math.floor(Math.random() * particleSentences.length)];
-
-            document.getElementById('question-display').innerHTML = `
-                <div class="question-text">올바른 조사를 선택하세요</div>
-                <div class="main-verb particle-sentence">${currentQuestion.sentence}</div>
-                <div class="verb-reading">${currentQuestion.reading}</div>
-                <div class="verb-meaning">${currentQuestion.korean}</div>
-            `;
-
-            document.getElementById('answer-section').innerHTML = `
-                <div class="answer-options">
-                    <button class="answer-btn" onclick="checkParticleAnswer('を')">を</button>
-                    <button class="answer-btn" onclick="checkParticleAnswer('に')">に</button>
-                </div>
-            `;
-        }
 
         // 활용형 생성 함수
         function getConjugatedForm(verb, type, form) {
@@ -1226,43 +1096,6 @@
             document.getElementById('next-btn').classList.add('show');
         }
 
-        // 조사 정답 확인
-        function checkParticleAnswer(selectedParticle) {
-            if (isAnswered) return;
-            isAnswered = true;
-            
-            const buttons = document.querySelectorAll('.answer-btn');
-            buttons.forEach(btn => btn.style.pointerEvents = 'none');
-            
-            const resultMessage = document.getElementById('result-message');
-            const completeSentence = currentQuestion.sentence.replace('___', selectedParticle);
-            
-            if (selectedParticle === currentQuestion.answer) {
-                event.currentTarget.classList.add('correct');
-                correctAnswers++;
-                resultMessage.innerHTML = `✅ 정답입니다!<br>
-                    <strong>${completeSentence}</strong><br>
-                    ${currentQuestion.korean}`;
-                resultMessage.classList.add('show', 'correct');
-            } else {
-                event.currentTarget.classList.add('incorrect');
-                buttons.forEach(btn => {
-                    if (btn.textContent === currentQuestion.answer) {
-                        btn.classList.add('correct');
-                    }
-                });
-                const correctSentence = currentQuestion.sentence.replace('___', currentQuestion.answer);
-                wrongAnswers++;
-                resultMessage.innerHTML = `❌ 틀렸습니다.<br>
-                    정답: <strong>${correctSentence}</strong><br>
-                    ${currentQuestion.korean}`;
-                resultMessage.classList.add('show', 'incorrect');
-            }
-            
-            totalQuestions++;
-            updateStats();
-            document.getElementById('next-btn').classList.add('show');
-        }
 
         // 통계 업데이트
         function updateStats() {
@@ -1324,19 +1157,6 @@
                 50% { opacity: 0.6; }
             }
 
-            .particle-sentence {
-                font-size: 2em;
-                line-height: 1.5;
-            }
-
-            .particle-sentence ruby {
-                font-size: 1em;
-            }
-
-            .particle-sentence rt {
-                font-size: 0.5em;
-                color: #666;
-            }
         `;
         document.head.appendChild(style);
     </script>
