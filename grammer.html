@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JLPT 필수 문법 - 조사, 형용사, 시제, 조건문 등 일본어 핵심 문법 학습">
+    <meta name="keywords" content="일본어, JLPT, 문법, 조사, 형용사, 시제, 조건문, 경어, 학습">
+    <meta name="author" content="Japanese Grammar Master">
+    <title>🎌 JLPT 필수 문법 마스터 - 조사·형용사·시제·조건문 완전정복</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="nav-home">
+                <button onclick="goHome()" class="home-btn" aria-label="홈으로 돌아가기">🏠 홈</button>
+            </div>
+            <h1>🎌 JLPT 필수 문법 마스터</h1>
+            <p>조사 · 형용사 · 시제 · 조건문 · 경어 완전 정복</p>
+        </div>
+
+        <div class="tab-container">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('particles')" aria-label="조사 학습" tabindex="0">🔤 조사 완전정복</button>
+                <button class="tab-btn" onclick="switchTab('adjectives')" aria-label="형용사 활용" tabindex="0">📝 형용사 활용</button>
+                <button class="tab-btn" onclick="switchTab('tense')" aria-label="시제와 표현" tabindex="0">⏰ 시제·추측·의지</button>
+                <button class="tab-btn" onclick="switchTab('conditional')" aria-label="조건문" tabindex="0">🔀 조건문</button>
+                <button class="tab-btn" onclick="switchTab('keigo')" aria-label="경어" tabindex="0">🎩 경어</button>
+                <button class="tab-btn" onclick="switchTab('quiz')" aria-label="종합 퀴즈" tabindex="0">🎯 종합 퀴즈</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- 조사 탭 -->
+                <div id="particles-tab" class="tab-panel active">
+                    <div class="study-section">
+                        <!-- 주격 조사 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                주격 조사: は vs が
+                                <span class="group-badge">주어 표시</span>
+                            </h2>
+                            
+                            <div class="particle-comparison">
+                                <div class="particle-box">
+                                    <div class="particle-title">は (주제 제시)</div>
+                                    <div class="rule-content">
+                                        <p><strong>✅ 사용 원칙:</strong></p>
+                                        <p>• 주제를 제시할 때 (대조/비교)</p>
+                                        <p>• 일반적인 진술</p>
+                                        <p>• 이미 알려진 정보</p>
+                                        <br>
+                                        <p><strong>📝 예문:</strong></p>
+                                        <p>• <ruby>私<rt>わたし</rt></ruby>は<ruby>学生<rt>がくせい</rt></ruby>です。<br>
+                                           <small>나는 학생입니다. (나에 대한 설명)</small></p>
+                                        <p>• <ruby>象<rt>ぞう</rt></ruby>は<ruby>鼻<rt>はな</rt></ruby>が<ruby>長<rt>なが</rt></ruby>い。<br>
+                                           <small>코끼리는 코가 길다. (일반적 사실)</small></p>
+                                        <p>• <ruby>今日<rt>きょう</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>いですね。<br>
+                                           <small>오늘은 덥네요. (오늘에 대한 설명)</small></p>
+                                    </div>
+                                </div>
+
+                                <div class="particle-box">
+                                    <div class="particle-title">が (주어 강조)</div>
+                                    <div class="rule-content">
+                                        <p><strong>✅ 사용 원칙:</strong></p>
+                                        <p>• 새로운 정보 제시</p>
+                                        <p>• 주어를 강조할 때</p>
+                                        <p>• 의문사와 함께</p>
+                                        <br>
+                                        <p><strong>📝 예문:</strong></p>
+                                        <p>• <ruby>誰<rt>だれ</rt></ruby>が<ruby>来<rt>き</rt></ruby>ましたか？<br>
+                                           <small>누가 왔습니까? (의문사)</small></p>
+                                        <p>• <ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っています。<br>
+                                           <small>비가 내리고 있습니다. (현상 묘사)</small></p>
+                                        <p>• <ruby>田中<rt>たなか</rt></ruby>さんが<ruby>好<rt>す</rt></ruby>きです。<br>
+                                           <small>다나카 씨를 좋아합니다. (감정 대상)</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 기타 중요 조사 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                기타 필수 조사
+                                <span class="group-badge">장소·시간·수단</span>
+                            </h2>
+                            
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">📍</span> で (장소/수단)
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>1. 동작의 장소:</strong> <ruby>図書館<rt>としょかん</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>する (도서관에서 공부하다)</p>
+                                    <p><strong>2. 수단/방법:</strong> <ruby>箸<rt>はし</rt></ruby>で<ruby>食<rt>た</rt></ruby>べる (젓가락으로 먹다)</p>
+                                    <p><strong>3. 재료:</strong> <ruby>木<rt>き</rt></ruby>で<ruby>作<rt>つく</rt></ruby>る (나무로 만들다)</p>
+                                    <p><strong>4. 이유:</strong> <ruby>風邪<rt>かぜ</rt></ruby>で<ruby>休<rt>やす</rt></ruby>む (감기로 쉬다)</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">➡️</span> から / まで (시작점/종점)
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>から (부터/에서):</strong></p>
+                                    <p>• <ruby>東京<rt>とうきょう</rt></ruby>から<ruby>大阪<rt>おおさか</rt></ruby>まで (도쿄에서 오사카까지)</p>
+                                    <p>• <ruby>朝<rt>あさ</rt></ruby>から<ruby>晩<rt>ばん</rt></ruby>まで (아침부터 저녁까지)</p>
+                                    <br>
+                                    <p><strong>まで (까지):</strong></p>
+                                    <p>• <ruby>駅<rt>えき</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>く (역까지 걷다)</p>
+                                    <p>• 10<ruby>時<rt>じ</rt></ruby>まで<ruby>待<rt>ま</rt></ruby>つ (10시까지 기다리다)</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">👥</span> と / や / も (나열/추가)
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>と (완전 나열):</strong> AとBとC (A와 B와 C - 전부)</p>
+                                    <p><strong>や (불완전 나열):</strong> AやB (A나 B 등 - 예시)</p>
+                                    <p><strong>も (추가):</strong> Aも (A도)</p>
+                                    <br>
+                                    <p>• <ruby>本<rt>ほん</rt></ruby>とペンを<ruby>買<rt>か</rt></ruby>う (책과 펜을 사다)</p>
+                                    <p>• <ruby>本<rt>ほん</rt></ruby>やペンを<ruby>買<rt>か</rt></ruby>う (책이나 펜 등을 사다)</p>
+                                    <p>• <ruby>本<rt>ほん</rt></ruby>も<ruby>買<rt>か</rt></ruby>う (책도 사다)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 형용사 활용 탭 -->
+                <div id="adjectives-tab" class="tab-panel">
+                    <div class="study-section">
+                        <!-- い형용사 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                い형용사 활용법
+                                <span class="group-badge">い로 끝나는 형용사</span>
+                            </h2>
+                            
+                            <table class="conjugation-table">
+                                <thead>
+                                    <tr>
+                                        <th>기본형</th>
+                                        <th>현재 긍정</th>
+                                        <th>현재 부정</th>
+                                        <th>과거 긍정</th>
+                                        <th>과거 부정</th>
+                                        <th>부사형</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><ruby>高<rt>たか</rt></ruby>い<br><small>높다/비싸다</small></td>
+                                        <td><ruby>高<rt>たか</rt></ruby>い<br><small>높다</small></td>
+                                        <td><ruby>高<rt>たか</rt></ruby>くない<br><small>높지 않다</small></td>
+                                        <td><ruby>高<rt>たか</rt></ruby>かった<br><small>높았다</small></td>
+                                        <td><ruby>高<rt>たか</rt></ruby>くなかった<br><small>높지 않았다</small></td>
+                                        <td><ruby>高<rt>たか</rt></ruby>く<br><small>높게</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td><ruby>新<rt>あたら</rt></ruby>しい<br><small>새롭다</small></td>
+                                        <td><ruby>新<rt>あたら</rt></ruby>しい<br><small>새롭다</small></td>
+                                        <td><ruby>新<rt>あたら</rt></ruby>しくない<br><small>새롭지 않다</small></td>
+                                        <td><ruby>新<rt>あたら</rt></ruby>しかった<br><small>새로웠다</small></td>
+                                        <td><ruby>新<rt>あたら</rt></ruby>しくなかった<br><small>새롭지 않았다</small></td>
+                                        <td><ruby>新<rt>あたら</rt></ruby>しく<br><small>새롭게</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>いい/よい<br><small>좋다</small></td>
+                                        <td>いい<br><small>좋다</small></td>
+                                        <td>よくない<br><small>좋지 않다</small></td>
+                                        <td>よかった<br><small>좋았다</small></td>
+                                        <td>よくなかった<br><small>좋지 않았다</small></td>
+                                        <td>よく<br><small>좋게/잘</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="exception-box">
+                                <div class="exception-title">
+                                    <span class="icon">⚠️</span> 특별 주의: いい의 활용
+                                </div>
+                                <p>「いい」는 기본형만 いい이고, 활용할 때는 모두 「よい」의 형태로 변합니다!</p>
+                                <p>• いい → よくない (좋지 않다)</p>
+                                <p>• いい → よかった (좋았다)</p>
+                                <p>• いい → よく (잘/자주)</p>
+                            </div>
+                        </div>
+
+                        <!-- な형용사 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                な형용사 활용법
+                                <span class="group-badge">な를 붙이는 형용사</span>
+                            </h2>
+                            
+                            <table class="conjugation-table">
+                                <thead>
+                                    <tr>
+                                        <th>기본형</th>
+                                        <th>명사 수식</th>
+                                        <th>현재 긍정</th>
+                                        <th>현재 부정</th>
+                                        <th>과거 긍정</th>
+                                        <th>과거 부정</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><ruby>静<rt>しず</rt></ruby>か<br><small>조용하다</small></td>
+                                        <td><ruby>静<rt>しず</rt></ruby>かな<br><small>조용한</small></td>
+                                        <td><ruby>静<rt>しず</rt></ruby>かだ/です<br><small>조용하다</small></td>
+                                        <td><ruby>静<rt>しず</rt></ruby>かじゃない<br><small>조용하지 않다</small></td>
+                                        <td><ruby>静<rt>しず</rt></ruby>かだった<br><small>조용했다</small></td>
+                                        <td><ruby>静<rt>しず</rt></ruby>かじゃなかった<br><small>조용하지 않았다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td><ruby>元気<rt>げんき</rt></ruby><br><small>건강하다</small></td>
+                                        <td><ruby>元気<rt>げんき</rt></ruby>な<br><small>건강한</small></td>
+                                        <td><ruby>元気<rt>げんき</rt></ruby>だ/です<br><small>건강하다</small></td>
+                                        <td><ruby>元気<rt>げんき</rt></ruby>じゃない<br><small>건강하지 않다</small></td>
+                                        <td><ruby>元気<rt>げんき</rt></ruby>だった<br><small>건강했다</small></td>
+                                        <td><ruby>元気<rt>げんき</rt></ruby>じゃなかった<br><small>건강하지 않았다</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>きれい<br><small>예쁘다</small></td>
+                                        <td>きれいな<br><small>예쁜</small></td>
+                                        <td>きれいだ/です<br><small>예쁘다</small></td>
+                                        <td>きれいじゃない<br><small>예쁘지 않다</small></td>
+                                        <td>きれいだった<br><small>예뻤다</small></td>
+                                        <td>きれいじゃなかった<br><small>예쁘지 않았다</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">💡</span> な형용사와 い형용사 구별법
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>な형용사인 것들 (주의!):</strong></p>
+                                    <p>• きれい (예쁘다) - い로 끝나지만 な형용사</p>
+                                    <p>• <ruby>有名<rt>ゆうめい</rt></ruby> (유명하다)</p>
+                                    <p>• <ruby>嫌<rt>きら</rt></ruby>い (싫다)</p>
+                                    <br>
+                                    <p><strong>구별 팁:</strong> 한자+い는 대부분 な형용사!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 시제와 표현 탭 -->
+                <div id="tense-tab" class="tab-panel">
+                    <div class="study-section">
+                        <!-- 시제 표현 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                시제 표현
+                                <span class="group-badge">과거·현재·미래</span>
+                            </h2>
+                            
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">⏰</span> 기본 시제
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>현재/미래:</strong> ~ます / ~です</p>
+                                    <p>• <ruby>明日<rt>あした</rt></ruby><ruby>行<rt>い</rt></ruby>きます。(내일 갑니다)</p>
+                                    <p><strong>과거:</strong> ~ました / ~でした</p>
+                                    <p>• <ruby>昨日<rt>きのう</rt></ruby><ruby>行<rt>い</rt></ruby>きました。(어제 갔습니다)</p>
+                                    <p><strong>진행형:</strong> ~ている</p>
+                                    <p>• <ruby>今<rt>いま</rt></ruby><ruby>食<rt>た</rt></ruby>べています。(지금 먹고 있습니다)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 추측 표현 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                추측·추정 표현
+                                <span class="group-badge">불확실성 표현</span>
+                            </h2>
+                            
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">🤔</span> でしょう / だろう
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>의미:</strong> ~일 것이다 (추측)</p>
+                                    <p>• <ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>でしょう。<br>
+                                       <small>내일은 비가 올 것입니다.</small></p>
+                                    <p>• <ruby>彼<rt>かれ</rt></ruby>は<ruby>来<rt>こ</rt></ruby>ないだろう。<br>
+                                       <small>그는 오지 않을 것이다.</small></p>
+                                </div>
+                            </div>
+
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">🎲</span> かもしれない
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>의미:</strong> ~일지도 모른다 (가능성)</p>
+                                    <p>• <ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>るかもしれない。<br>
+                                       <small>비가 올지도 모른다.</small></p>
+                                    <p>• <ruby>間違<rt>まちが</rt></ruby>いかもしれません。<br>
+                                       <small>실수일지도 모릅니다.</small></p>
+                                </div>
+                            </div>
+
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">✅</span> はず
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>의미:</strong> ~일 것이다 (근거 있는 추측)</p>
+                                    <p>• もう<ruby>着<rt>つ</rt></ruby>いたはずだ。<br>
+                                       <small>벌써 도착했을 것이다.</small></p>
+                                    <p>• <ruby>知<rt>し</rt></ruby>っているはずです。<br>
+                                       <small>알고 있을 것입니다.</small></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 의지·희망 표현 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                의지·희망 표현
+                                <span class="group-badge">원함·계획</span>
+                            </h2>
+                            
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">💭</span> ~たい
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>의미:</strong> ~하고 싶다 (희망)</p>
+                                    <p>• <ruby>日本<rt>にほん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きたい。<br>
+                                       <small>일본에 가고 싶다.</small></p>
+                                    <p>• <ruby>寿司<rt>すし</rt></ruby>を<ruby>食<rt>た</rt></ruby>べたいです。<br>
+                                       <small>초밥을 먹고 싶습니다.</small></p>
+                                    <p><strong>주의:</strong> 3인칭에는 ~たがる를 사용</p>
+                                    <p>• <ruby>彼<rt>かれ</rt></ruby>は<ruby>行<rt>い</rt></ruby>きたがっている。<br>
+                                       <small>그는 가고 싶어한다.</small></p>
+                                </div>
+                            </div>
+
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">📅</span> つもり / 予定
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>つもり:</strong> ~할 생각이다 (의지)</p>
+                                    <p>• <ruby>明日<rt>あした</rt></ruby><ruby>行<rt>い</rt></ruby>くつもりです。<br>
+                                       <small>내일 갈 생각입니다.</small></p>
+                                    <br>
+                                    <p><strong>予定:</strong> ~할 예정이다 (계획)</p>
+                                    <p>• <ruby>来週<rt>らいしゅう</rt></ruby><ruby>会<rt>あ</rt></ruby>う<ruby>予定<rt>よてい</rt></ruby>です。<br>
+                                       <small>다음 주에 만날 예정입니다.</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 조건문 탭 -->
+                <div id="conditional-tab" class="tab-panel">
+                    <div class="study-section">
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                조건문 4가지
+                                <span class="group-badge">상황별 사용법</span>
+                            </h2>
+                            
+                            <!-- ば 조건문 -->
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">1️⃣</span> ~ば (일반 조건)
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>형성:</strong></p>
+                                    <p>• 동사: <ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby>けば</p>
+                                    <p>• い형용사: <ruby>高<rt>たか</rt></ruby>い → <ruby>高<rt>たか</rt></ruby>ければ</p>
+                                    <p>• な형용사/명사: <ruby>静<rt>しず</rt></ruby>か → <ruby>静<rt>しず</rt></ruby>かならば</p>
+                                    <br>
+                                    <p><strong>예문:</strong></p>
+                                    <p>• <ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>れば、<ruby>行<rt>い</rt></ruby>きません。<br>
+                                       <small>비가 오면 가지 않습니다.</small></p>
+                                    <p>• <ruby>安<rt>やす</rt></ruby>ければ<ruby>買<rt>か</rt></ruby>います。<br>
+                                       <small>싸면 삽니다.</small></p>
+                                </div>
+                            </div>
+
+                            <!-- たら 조건문 -->
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">2️⃣</span> ~たら (완료 후 조건)
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>형성:</strong> 과거형 + ら</p>
+                                    <p>• <ruby>行<rt>い</rt></ruby>った → <ruby>行<rt>い</rt></ruby>ったら</p>
+                                    <p>• <ruby>高<rt>たか</rt></ruby>かった → <ruby>高<rt>たか</rt></ruby>かったら</p>
+                                    <br>
+                                    <p><strong>예문:</strong></p>
+                                    <p>• <ruby>家<rt>いえ</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ったら、<ruby>電話<rt>でんわ</rt></ruby>してください。<br>
+                                       <small>집에 도착하면 전화해 주세요.</small></p>
+                                    <p>• <ruby>時間<rt>じかん</rt></ruby>があったら、<ruby>会<rt>あ</rt></ruby>いましょう。<br>
+                                       <small>시간이 있으면 만나요.</small></p>
+                                </div>
+                            </div>
+
+                            <!-- と 조건문 -->
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">3️⃣</span> ~と (자연적 결과)
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>형성:</strong> 동사 기본형/た형 + と</p>
+                                    <p><strong>특징:</strong> 항상 일어나는 자연적 결과</p>
+                                    <br>
+                                    <p><strong>예문:</strong></p>
+                                    <p>• <ruby>春<rt>はる</rt></ruby>になると、<ruby>花<rt>はな</rt></ruby>が<ruby>咲<rt>さ</rt></ruby>く。<br>
+                                       <small>봄이 되면 꽃이 핀다.</small></p>
+                                    <p>• ボタンを<ruby>押<rt>お</rt></ruby>すと、ドアが<ruby>開<rt>あ</rt></ruby>く。<br>
+                                       <small>버튼을 누르면 문이 열린다.</small></p>
+                                </div>
+                            </div>
+
+                            <!-- なら 조건문 -->
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">4️⃣</span> ~なら (주제 한정)
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>형성:</strong> 명사/동사 기본형 + なら</p>
+                                    <p><strong>특징:</strong> "~라면" (주제를 한정)</p>
+                                    <br>
+                                    <p><strong>예문:</strong></p>
+                                    <p>• <ruby>日本語<rt>にほんご</rt></ruby>なら、<ruby>少<rt>すこ</rt></ruby>し<ruby>話<rt>はな</rt></ruby>せます。<br>
+                                       <small>일본어라면 조금 할 수 있습니다.</small></p>
+                                    <p>• <ruby>明日<rt>あした</rt></ruby>なら、<ruby>時間<rt>じかん</rt></ruby>があります。<br>
+                                       <small>내일이라면 시간이 있습니다.</small></p>
+                                </div>
+                            </div>
+
+                            <div class="exception-box">
+                                <div class="exception-title">
+                                    <span class="icon">📊</span> 조건문 비교표
+                                </div>
+                                <table class="conjugation-table">
+                                    <thead>
+                                        <tr>
+                                            <th>형태</th>
+                                            <th>특징</th>
+                                            <th>뒤에 올 수 없는 것</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>~ば</td>
+                                            <td>일반적 가정</td>
+                                            <td>의지·명령·권유</td>
+                                        </tr>
+                                        <tr>
+                                            <td>~たら</td>
+                                            <td>완료 후 조건</td>
+                                            <td>제한 없음</td>
+                                        </tr>
+                                        <tr>
+                                            <td>~と</td>
+                                            <td>자연적 결과</td>
+                                            <td>의지·명령·권유</td>
+                                        </tr>
+                                        <tr>
+                                            <td>~なら</td>
+                                            <td>주제 한정</td>
+                                            <td>제한 없음</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 경어 탭 -->
+                <div id="keigo-tab" class="tab-panel">
+                    <div class="study-section">
+                        <!-- 존경어 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                존경어 (尊敬語)
+                                <span class="group-badge">상대를 높이는 표현</span>
+                            </h2>
+                            
+                            <table class="conjugation-table">
+                                <thead>
+                                    <tr>
+                                        <th>보통형</th>
+                                        <th>존경어</th>
+                                        <th>お/ご+ます형</th>
+                                        <th>れる/られる형</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>する<br><small>하다</small></td>
+                                        <td>なさる<br><small>하시다</small></td>
+                                        <td>-</td>
+                                        <td>される</td>
+                                    </tr>
+                                    <tr>
+                                        <td><ruby>来<rt>く</rt></ruby>る<br><small>오다</small></td>
+                                        <td>いらっしゃる<br><small>오시다</small></td>
+                                        <td>-</td>
+                                        <td><ruby>来<rt>こ</rt></ruby>られる</td>
+                                    </tr>
+                                    <tr>
+                                        <td><ruby>行<rt>い</rt></ruby>く<br><small>가다</small></td>
+                                        <td>いらっしゃる<br><small>가시다</small></td>
+                                        <td>-</td>
+                                        <td><ruby>行<rt>い</rt></ruby>かれる</td>
+                                    </tr>
+                                    <tr>
+                                        <td><ruby>言<rt>い</rt></ruby>う<br><small>말하다</small></td>
+                                        <td>おっしゃる<br><small>말씀하시다</small></td>
+                                        <td>-</td>
+                                        <td><ruby>言<rt>い</rt></ruby>われる</td>
+                                    </tr>
+                                    <tr>
+                                        <td><ruby>見<rt>み</rt></ruby>る<br><small>보다</small></td>
+                                        <td>ご<ruby>覧<rt>らん</rt></ruby>になる<br><small>보시다</small></td>
+                                        <td>-</td>
+                                        <td><ruby>見<rt>み</rt></ruby>られる</td>
+                                    </tr>
+                                    <tr>
+                                        <td><ruby>食<rt>た</rt></ruby>べる<br><small>먹다</small></td>
+                                        <td><ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がる<br><small>드시다</small></td>
+                                        <td>-</td>
+                                        <td><ruby>食<rt>た</rt></ruby>べられる</td>
+                                    </tr>
+                                    <tr>
+                                        <td><ruby>読<rt>よ</rt></ruby>む<br><small>읽다</small></td>
+                                        <td>-</td>
+                                        <td>お<ruby>読<rt>よ</rt></ruby>みになる</td>
+                                        <td><ruby>読<rt>よ</rt></ruby>まれる</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">📝</span> 존경어 만드는 방법
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>1. 특별 존경어:</strong> 외워야 하는 특별한 형태</p>
+                                    <p><strong>2. お/ご + 동사ます형 + になる:</strong></p>
+                                    <p>• お<ruby>待<rt>ま</rt></ruby>ちになる (기다리시다)</p>
+                                    <p>• ご<ruby>利用<rt>りよう</rt></ruby>になる (이용하시다)</p>
+                                    <p><strong>3. れる/られる형:</strong></p>
+                                    <p>• 1그룹: <ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby>かれる</p>
+                                    <p>• 2그룹: <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby>られる</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 겸양어 -->
+                        <div class="group-card">
+                            <h2 class="group-title">
+                                겸양어 (謙譲語)
+                                <span class="group-badge">자신을 낮추는 표현</span>
+                            </h2>
+                            
+                            <table class="conjugation-table">
+                                <thead>
+                                    <tr>
+                                        <th>보통형</th>
+                                        <th>겸양어</th>
+                                        <th>お/ご+する형</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>する<br><small>하다</small></td>
+                                        <td>いたす<br><small>하다(겸손)</small></td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td><ruby>行<rt>い</rt></ruby>く/<ruby>来<rt>く</rt></ruby>る<br><small>가다/오다</small></td>
+                                        <td><ruby>参<rt>まい</rt></ruby>る<br><small>가다/오다(겸손)</small></td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td><ruby>言<rt>い</rt></ruby>う<br><small>말하다</small></td>
+                                        <td><ruby>申<rt>もう</rt></ruby>す<br><small>말씀드리다</small></td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td><ruby>見<rt>み</rt></ruby>る<br><small>보다</small></td>
+                                        <td><ruby>拝見<rt>はいけん</rt></ruby>する<br><small>뵙다</small></td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>もらう<br><small>받다</small></td>
+                                        <td>いただく<br><small>받다(겸손)</small></td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>あげる<br><small>주다</small></td>
+                                        <td><ruby>差<rt>さ</rt></ruby>し<ruby>上<rt>あ</rt></ruby>げる<br><small>드리다</small></td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td><ruby>会<rt>あ</rt></ruby>う<br><small>만나다</small></td>
+                                        <td>お<ruby>目<rt>め</rt></ruby>にかかる<br><small>뵙다</small></td>
+                                        <td>お<ruby>会<rt>あ</rt></ruby>いする</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="rule-box">
+                                <div class="rule-title">
+                                    <span class="icon">🎩</span> 겸양어 사용 상황
+                                </div>
+                                <div class="rule-content">
+                                    <p><strong>사용 대상:</strong></p>
+                                    <p>• 상사, 선생님, 고객</p>
+                                    <p>• 처음 만나는 사람</p>
+                                    <p>• 비즈니스 상황</p>
+                                    <br>
+                                    <p><strong>예문:</strong></p>
+                                    <p>• <ruby>資料<rt>しりょう</rt></ruby>を<ruby>拝見<rt>はいけん</rt></ruby>いたしました。<br>
+                                       <small>자료를 보았습니다. (겸손)</small></p>
+                                    <p>• <ruby>明日<rt>あした</rt></ruby>、お<ruby>伺<rt>うかが</rt></ruby>いします。<br>
+                                       <small>내일 찾아뵙겠습니다.</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 종합 퀴즈 탭 -->
+                <div id="quiz-tab" class="tab-panel">
+                    <div class="quiz-selector">
+                        <div class="quiz-type-card selected" onclick="selectQuizType('particle')">
+                            <div class="quiz-type-title">🔤 조사 선택</div>
+                            <div class="quiz-type-desc">は/が/を/に/で 등 올바른 조사 선택하기</div>
+                        </div>
+                        <div class="quiz-type-card" onclick="selectQuizType('adjective')">
+                            <div class="quiz-type-title">📝 형용사 활용</div>
+                            <div class="quiz-type-desc">い형용사와 な형용사 올바르게 활용하기</div>
+                        </div>
+                        <div class="quiz-type-card" onclick="selectQuizType('tense')">
+                            <div class="quiz-type-title">⏰ 시제·표현</div>
+                            <div class="quiz-type-desc">과거형, 추측, 희망 표현 만들기</div>
+                        </div>
+                        <div class="quiz-type-card" onclick="selectQuizType('conditional')">
+                            <div class="quiz-type-title">🔀 조건문</div>
+                            <div class="quiz-type-desc">ば/たら/と/なら 올바르게 사용하기</div>
+                        </div>
+                        <div class="quiz-type-card" onclick="selectQuizType('keigo')">
+                            <div class="quiz-type-title">🎩 경어</div>
+                            <div class="quiz-type-desc">존경어와 겸양어 올바르게 사용하기</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-stats">
+                        <div class="stat-card">
+                            <div class="stat-label">총 문제</div>
+                            <div class="stat-value" id="total-count">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">정답</div>
+                            <div class="stat-value" id="correct-count">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">오답</div>
+                            <div class="stat-value" id="wrong-count">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">정답률</div>
+                            <div class="stat-value" id="accuracy">0%</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-area">
+                        <div class="question-display" id="question-display">
+                            <!-- 동적으로 생성됨 -->
+                        </div>
+
+                        <div class="result-message" id="result-message"></div>
+
+                        <div id="answer-section">
+                            <!-- 동적으로 생성됨 -->
+                        </div>
+
+                        <button class="next-btn" id="next-btn" onclick="nextQuestion()">다음 문제 →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 문법 퀴즈 데이터베이스
+        const grammarQuizData = {
+            particle: [
+                { 
+                    sentence: '<ruby>私<rt>わたし</rt></ruby>___<ruby>学生<rt>がくせい</rt></ruby>です。', 
+                    answer: 'は', 
+                    options: ['は', 'が', 'を', 'に'],
+                    explanation: '주제를 제시할 때는 は를 사용합니다.',
+                    korean: '나는 학생입니다.'
+                },
+                {
+                    sentence: '<ruby>誰<rt>だれ</rt></ruby>___<ruby>来<rt>き</rt></ruby>ましたか？',
+                    answer: 'が',
+                    options: ['は', 'が', 'を', 'で'],
+                    explanation: '의문사와 함께는 が를 사용합니다.',
+                    korean: '누가 왔습니까?'
+                },
+                {
+                    sentence: '<ruby>図書館<rt>としょかん</rt></ruby>___<ruby>勉強<rt>べんきょう</rt></ruby>します。',
+                    answer: 'で',
+                    options: ['に', 'で', 'を', 'へ'],
+                    explanation: '동작이 일어나는 장소는 で를 사용합니다.',
+                    korean: '도서관에서 공부합니다.'
+                },
+                {
+                    sentence: '<ruby>東京<rt>とうきょう</rt></ruby>___<ruby>大阪<rt>おおさか</rt></ruby>まで',
+                    answer: 'から',
+                    options: ['から', 'まで', 'に', 'で'],
+                    explanation: '시작점을 나타낼 때 から를 사용합니다.',
+                    korean: '도쿄에서 오사카까지'
+                },
+                {
+                    sentence: '<ruby>友達<rt>ともだち</rt></ruby>___<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ます。',
+                    answer: 'と',
+                    options: ['と', 'や', 'も', 'に'],
+                    explanation: '함께 하는 상대를 나타낼 때 と를 사용합니다.',
+                    korean: '친구와 영화를 봅니다.'
+                }
+            ],
+            adjective: [
+                {
+                    question: '「高い」の過去形は？',
+                    answer: '高かった',
+                    options: ['高かった', '高くなかった', '高いでした', '高いだった'],
+                    explanation: 'い형용사의 과거형은 い를 かった로 바꿉니다.',
+                    korean: '「높다/비싸다」의 과거형은?'
+                },
+                {
+                    question: '「静か」を名詞修飾する形は？',
+                    answer: '静かな',
+                    options: ['静かな', '静かい', '静かの', '静かに'],
+                    explanation: 'な형용사가 명사를 수식할 때는 な를 붙입니다.',
+                    korean: '「조용하다」를 명사 수식하는 형태는?'
+                },
+                {
+                    question: '「いい」の否定形は？',
+                    answer: 'よくない',
+                    options: ['よくない', 'いくない', 'いいじゃない', 'よいない'],
+                    explanation: 'いい는 활용할 때 よい 형태로 변합니다.',
+                    korean: '「좋다」의 부정형은?'
+                },
+                {
+                    question: '「きれい」の過去形は？',
+                    answer: 'きれいだった',
+                    options: ['きれいだった', 'きれかった', 'きれいでした', 'きれくなった'],
+                    explanation: 'きれい는 い로 끝나지만 な형용사입니다.',
+                    korean: '「예쁘다」의 과거형은?'
+                }
+            ],
+            tense: [
+                {
+                    question: '「明日雨が___」（내일 비가 올 것이다 - 추측）',
+                    answer: '降るでしょう',
+                    options: ['降るでしょう', '降るはず', '降るかもしれない', '降りたい'],
+                    explanation: 'でしょう는 추측을 나타냅니다.',
+                    korean: '내일 비가 올 것이다 (추측)'
+                },
+                {
+                    question: '「日本に___」（일본에 가고 싶다）',
+                    answer: '行きたい',
+                    options: ['行きたい', '行くつもり', '行く予定', '行きます'],
+                    explanation: '~たい는 희망을 나타냅니다.',
+                    korean: '일본에 가고 싶다'
+                },
+                {
+                    question: '彼は来ない___（그는 오지 않을지도 모른다）',
+                    answer: 'かもしれない',
+                    options: ['かもしれない', 'でしょう', 'はず', 'つもり'],
+                    explanation: 'かもしれない는 가능성을 나타냅니다.',
+                    korean: '그는 오지 않을지도 모른다'
+                }
+            ],
+            conditional: [
+                {
+                    question: '「雨が___、行きません」（비가 오면 가지 않습니다）',
+                    answer: '降れば',
+                    options: ['降れば', '降ったら', '降ると', '降るなら'],
+                    explanation: '일반적인 가정은 ば를 사용합니다.',
+                    korean: '비가 오면 가지 않습니다'
+                },
+                {
+                    question: '「家に___、電話してください」（집에 도착하면 전화해 주세요）',
+                    answer: '帰ったら',
+                    options: ['帰ったら', '帰れば', '帰ると', '帰るなら'],
+                    explanation: '완료 후의 행동은 たら를 사용합니다.',
+                    korean: '집에 도착하면 전화해 주세요'
+                },
+                {
+                    question: '「春に___、花が咲く」（봄이 되면 꽃이 핀다）',
+                    answer: 'なると',
+                    options: ['なると', 'なれば', 'なったら', 'なるなら'],
+                    explanation: '자연적인 결과는 と를 사용합니다.',
+                    korean: '봄이 되면 꽃이 핀다'
+                }
+            ],
+            keigo: [
+                {
+                    question: '「する」의 존경어는?',
+                    answer: 'なさる',
+                    options: ['なさる', 'いたす', 'される', 'します'],
+                    explanation: 'する의 특별 존경어는 なさる입니다.',
+                    korean: '「하다」의 존경어는?'
+                },
+                {
+                    question: '「行く」의 겸양어는?',
+                    answer: '参る',
+                    options: ['参る', 'いらっしゃる', '行かれる', '伺う'],
+                    explanation: '行く의 겸양어는 参る입니다.',
+                    korean: '「가다」의 겸양어는?'
+                },
+                {
+                    question: '「見る」의 존경어는?',
+                    answer: 'ご覧になる',
+                    options: ['ご覧になる', '拝見する', '見られる', '見ます'],
+                    explanation: '見る의 특별 존경어는 ご覧になる입니다.',
+                    korean: '「보다」의 존경어는?'
+                },
+                {
+                    question: '「言う」의 겸양어는?',
+                    answer: '申す',
+                    options: ['申す', 'おっしゃる', '言われる', '申し上げる'],
+                    explanation: '言う의 기본 겸양어는 申す입니다.',
+                    korean: '「말하다」의 겸양어는?'
+                }
+            ]
+        };
+
+        // 퀴즈 상태 변수
+        let currentQuizType = 'particle';
+        let currentQuestion = null;
+        let totalQuestions = 0;
+        let correctAnswers = 0;
+        let wrongAnswers = 0;
+        let isAnswered = false;
+
+        // 탭 전환 함수
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            
+            const tabIndex = {
+                'particles': 0,
+                'adjectives': 1,
+                'tense': 2,
+                'conditional': 3,
+                'keigo': 4,
+                'quiz': 5
+            };
+            
+            document.querySelectorAll('.tab-btn')[tabIndex[tabName]].classList.add('active');
+            document.getElementById(`${tabName}-tab`).classList.add('active');
+            
+            if (tabName === 'quiz' && !currentQuestion) {
+                nextQuestion();
+            }
+        }
+
+        // 퀴즈 타입 선택
+        function selectQuizType(type) {
+            currentQuizType = type;
+            document.querySelectorAll('.quiz-type-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+            nextQuestion();
+        }
+
+        // 새 문제 생성
+        function nextQuestion() {
+            isAnswered = false;
+            document.getElementById('result-message').classList.remove('show', 'correct', 'incorrect');
+            document.getElementById('next-btn').classList.remove('show');
+            
+            const questions = grammarQuizData[currentQuizType];
+            currentQuestion = questions[Math.floor(Math.random() * questions.length)];
+            
+            displayQuestion();
+        }
+
+        // 문제 표시
+        function displayQuestion() {
+            const display = document.getElementById('question-display');
+            
+            if (currentQuestion.sentence) {
+                // 빈칸 채우기 문제
+                display.innerHTML = `
+                    <div class="question-text">올바른 조사를 선택하세요</div>
+                    <div class="main-verb">${currentQuestion.sentence}</div>
+                    <div class="verb-meaning">${currentQuestion.korean}</div>
+                `;
+            } else {
+                // 일반 문제
+                display.innerHTML = `
+                    <div class="question-text">${currentQuestion.question}</div>
+                    <div class="verb-meaning">${currentQuestion.korean}</div>
+                `;
+            }
+            
+            // 답변 옵션 생성
+            const answerSection = document.getElementById('answer-section');
+            answerSection.innerHTML = `
+                <div class="answer-options">
+                    ${currentQuestion.options.map(option => 
+                        `<button class="answer-btn" onclick="checkAnswer('${option}')">${option}</button>`
+                    ).join('')}
+                </div>
+            `;
+        }
+
+        // 답 체크
+        function checkAnswer(selected) {
+            if (isAnswered) return;
+            isAnswered = true;
+            
+            const buttons = document.querySelectorAll('.answer-btn');
+            buttons.forEach(btn => btn.style.pointerEvents = 'none');
+            
+            const resultMessage = document.getElementById('result-message');
+            
+            if (selected === currentQuestion.answer) {
+                event.currentTarget.classList.add('correct');
+                correctAnswers++;
+                resultMessage.innerHTML = `✅ 정답입니다!<br>
+                    <small>💡 ${currentQuestion.explanation}</small>`;
+                resultMessage.classList.add('show', 'correct');
+            } else {
+                event.currentTarget.classList.add('incorrect');
+                buttons.forEach(btn => {
+                    if (btn.textContent === currentQuestion.answer) {
+                        btn.classList.add('correct');
+                    }
+                });
+                wrongAnswers++;
+                resultMessage.innerHTML = `❌ 틀렸습니다.<br>
+                    정답: <strong>${currentQuestion.answer}</strong><br>
+                    <small>💡 ${currentQuestion.explanation}</small>`;
+                resultMessage.classList.add('show', 'incorrect');
+            }
+            
+            totalQuestions++;
+            updateStats();
+            document.getElementById('next-btn').classList.add('show');
+        }
+
+        // 통계 업데이트
+        function updateStats() {
+            document.getElementById('total-count').textContent = totalQuestions;
+            document.getElementById('correct-count').textContent = correctAnswers;
+            document.getElementById('wrong-count').textContent = wrongAnswers;
+            const accuracy = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+            document.getElementById('accuracy').textContent = accuracy + '%';
+        }
+
+        // 홈으로 이동
+        function goHome() {
+            window.location.href = 'index.html';
+        }
+
+        // 키보드 네비게이션
+        document.addEventListener('keydown', function(e) {
+            const buttons = document.querySelectorAll('.answer-btn');
+            const keyNum = parseInt(e.key);
+            
+            if (keyNum >= 1 && keyNum <= buttons.length && !isAnswered) {
+                if (buttons[keyNum - 1]) {
+                    buttons[keyNum - 1].click();
+                }
+            }
+            
+            if (e.key === 'Enter' && document.getElementById('next-btn').classList.contains('show')) {
+                nextQuestion();
+            }
+        });
+
+        // 초기화
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStats();
+        });
+    </script>
+</body>
+</html>
